@@ -42,7 +42,7 @@ const Timeline = () => {
         <table className="text-lg border-separate border-spacing-3 text-white w-full">
           <tbody>
             {[
-              ["Full Paper Submission Deadline", "1st August 2026"],
+              ["Full Paper Submission Deadline", "16th August 2026"],
               ["Acceptance Intimation", "1st September 2026"],
               ["Registration Deadline", "1st October 2026"],
               ["Conference Date", "29-30 December 2026"],

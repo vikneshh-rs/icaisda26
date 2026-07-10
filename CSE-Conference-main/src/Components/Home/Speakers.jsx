@@ -3,14 +3,21 @@ import React from "react";
 const Speakers = () => {
   const speakers = [
     {
-      image: "/images/keynote-2026/krishna-mohan.jpg",
+      image: "images/keynote-2026/balaji-rajendran.jpg",
+      name: "Dr. Balaji Rajendran",
+      designation: "Scientist F & Group Head",
+      university: "Resilient Information Systems and Engineering (RISE), Centre for Development of Advanced Computing (C-DAC), Bengaluru",
+      keynote: "Digital Trust Triad: Users, Devices, Agents",
+    },
+    {
+      image: "images/keynote-2026/krishna-mohan.jpg",
       name: "Dr. C. Krishna Mohan",
       designation: "Professor",
       university: "Department of Computer Science and Engineering, IIT Hyderabad",
-      keynote: "Keynote Speaker",
+      keynote: "AI for Healthcare",
     },
     {
-      image: "/images/keynote-2026/peter-revesz.jpg",
+      image: "images/keynote-2026/peter-revesz.jpg",
       name: "Dr. Peter Z. Revesz",
       designation: "Professor",
       university: "University of Nebraska-Lincoln, Lincoln, USA",
@@ -18,7 +25,7 @@ const Speakers = () => {
         "Computational Decipherment of the Indus Valley Script: Recent Progress and Future Possibilities",
     },
     {
-      image: "/images/keynote-2026/balaji-palanisamy.jpg",
+      image: "images/keynote-2026/balaji-palanisamy.jpg",
       name: "Dr. Balaji Palanisamy",
       designation: "Associate Professor",
       university: "School of Computing and Information, University of Pittsburgh, USA",
@@ -26,7 +33,7 @@ const Speakers = () => {
         "Adversarial Attacks in Virtual Reality: Detection, Prevention, and Defense",
     },
     {
-      image: "/images/keynote-2026/rajarajan-sivaraj.png",
+      image: "images/keynote-2026/rajarajan-sivaraj.png",
       name: "Dr. Rajarajan Sivaraj",
       designation: "Vice President of Solution Architecture",
       university: "Aira Technologies, USA",
@@ -40,7 +47,7 @@ const Speakers = () => {
       <h2 className="font-semibold text-4xl text-center border-b-[3px] pb-1 border-blue-500 max-w-fit text-blue-400">
         Keynote Speakers
       </h2>
-      <div className="mt-6 md:mt-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 md:gap-10">
+      <div className="mt-6 md:mt-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-10">
         {speakers.map((ele, ind) => (
           <div className="flex flex-col items-center" key={ind}>
             <div className="min-w-40 min-h-40 md:min-w-48 md:min-h-48 max-w-48 max-h-48 relative rounded-full flex justify-center items-center group cursor-pointer">
@@ -90,7 +97,7 @@ const Speakers = () => {
       {/* NIRF Banner */}
       <div className="mt-10 max-w-3xl w-full mx-4">
         <img
-          src="/images/nirf-banner.png"
+          src="images/nirf-banner.png"
           alt="NIRF Banner"
           className="w-full rounded-xl shadow-lg"
         />
@@ -140,7 +147,7 @@ const Speakers = () => {
         <table className="md:text-lg border-separate border-spacing-3 text-white w-full">
           <tbody>
             {[
-              ["Full Paper Submission Deadline", "3rd August, 2026"],
+              ["Full Paper Submission Deadline", "16th August, 2026"],
               ["Acceptance Intimation", "6th September, 2026"],
               ["Registration Deadline", "5th October, 2026"],
               ["Conference Date", "12 - 13, November, 2026"],

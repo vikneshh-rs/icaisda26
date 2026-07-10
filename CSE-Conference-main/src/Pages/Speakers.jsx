@@ -31,28 +31,35 @@ const SectionTitle = ({ title }) => (
 function Speakers() {
   const keynoteSpeakers = [
     {
-      image: "/images/keynote-2026/krishna-mohan.jpg",
+      image: "images/keynote-2026/balaji-rajendran.jpg",
+      name: "Dr. Balaji Rajendran",
+      title: "Scientist F & Group Head",
+      organization: "Resilient Information Systems and Engineering (RISE), Centre for Development of Advanced Computing (C-DAC), Bengaluru",
+      topic: "Digital Trust Triad: Users, Devices, Agents"
+    },
+    {
+      image: "images/keynote-2026/krishna-mohan.jpg",
       name: "Dr. C. Krishna Mohan",
       title: "Professor",
       organization: "Department of Computer Science and Engineering, IIT Hyderabad",
-      topic: null
+      topic: "AI for Healthcare"
     },
     {
-      image: "/images/keynote-2026/peter-revesz.jpg",
+      image: "images/keynote-2026/peter-revesz.jpg",
       name: "Dr. Peter Z. Revesz",
       title: "Professor",
       organization: "University of Nebraska-Lincoln, Lincoln, USA",
       topic: "Computational Decipherment of the Indus Valley Script: Recent Progress and Future Possibilities"
     },
     {
-      image: "/images/keynote-2026/balaji-palanisamy.jpg",
+      image: "images/keynote-2026/balaji-palanisamy.jpg",
       name: "Dr. Balaji Palanisamy",
       title: "Associate Professor",
       organization: "School of Computing and Information, University of Pittsburgh, USA",
       topic: "Adversarial Attacks in Virtual Reality: Detection, Prevention, and Defense"
     },
     {
-      image: "/images/keynote-2026/rajarajan-sivaraj.png",
+      image: "images/keynote-2026/rajarajan-sivaraj.png",
       name: "Dr. Rajarajan Sivaraj",
       title: "Vice President of Solution Architecture",
       organization: "Aira Technologies, USA",
@@ -98,7 +105,7 @@ function Speakers() {
         </div>
 
         <SectionTitle title="Keynote Speakers" />
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {keynoteSpeakers.map((speaker, idx) => (
             <SpeakerCard key={idx} {...speaker} />
           ))}

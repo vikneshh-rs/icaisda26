@@ -56,8 +56,9 @@ const Registration = () => {
       icon: <Users className="w-8 h-8 text-emerald-600" />,
       description: "ICAISDA-2026 is an unmissable conference. It is a good chance and an effective platform for you to meet many renowned experts and researchers in the field of the latest academic research. You welcome to attend this great event. You just need to complete the registration as a Listener before the registration deadline.",
       bullets: [
+        "Co-authors, Scholars, and others: ₹2,000 / $40",
+        "UG and PG students: ₹1,000 / $25",
         "Attend all technical and keynote sessions.",
-        "Network with academic and industry experts.",
         "Receive an official participation certificate."
       ],
       bg: "bg-gradient-to-b from-emerald-50/70 to-emerald-100/30",

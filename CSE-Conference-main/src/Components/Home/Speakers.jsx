@@ -148,7 +148,7 @@ const Speakers = () => {
           <tbody>
             {[
               ["Full Paper Submission Deadline", "31st August, 2026"],
-              ["Acceptance Intimation", "21st September, 2026"],
+              ["Acceptance Intimation", "27th September, 2026"],
               ["Registration Deadline", "19th October, 2026"],
               ["Conference Date", "12 - 13, November, 2026"],
             ].map((row, index) => (

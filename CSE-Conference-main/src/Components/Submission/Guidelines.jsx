@@ -37,7 +37,7 @@ const Guidelines = () => {
           Submit your paper and follow the official format
         </p>
         <p className="text-blue-900 text-center text-lg md:text-2xl font-semibold mb-4">
-          Last Date for Paper Submission: <b>3rd November, 2026</b>
+          Last Date for Paper Submission: <b>31st August 2026</b>
         </p>
 
         <div className="flex flex-col md:flex-row gap-4 justify-center items-center">

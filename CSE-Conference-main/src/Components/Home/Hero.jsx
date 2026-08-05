@@ -32,7 +32,7 @@ const Hero = () => {
               href="https://ptuniv.edu.in/icaisda25/#/"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-blue-800 hover:bg-blue-900 text-white font-semibold rounded-full shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-blue-500/30"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-blue-800 hover:bg-blue-900 text-white font-semibold rounded-full shadow-lg transition-all duration-300 hover:scale-105"
             >
               <span>ICAISDA-2025 Website</span>
               <FaExternalLinkAlt className="text-sm" />

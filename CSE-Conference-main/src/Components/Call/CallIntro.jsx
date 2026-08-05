@@ -148,7 +148,7 @@ const Section = ({ title, topics }) => (
     <h3 className="text-2xl font-bold text-gray-800 mb-6">{title}</h3>
     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
       {topics.map((topic, index) => (
-        <div key={index} className="flex items-start font-bold space-x-2 p-3 rounded-lg hover:bg-blue-100">
+        <div key={index} className="flex items-start font-bold space-x-2 p-3 rounded-lg">
           <span className="text-blue-500 mt-1">•</span>
           <span className="text-white-800">{topic}</span>
         </div>

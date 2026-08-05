@@ -18,7 +18,7 @@ const Joint_Secretaries = [
 
 
 const CommitteeCard = ({ title, name, position, department }) => (
-  <div className="bg-gradient-to-br from-[#1E40AF] via-[#2563EB] to-[#3B82F6] rounded-2xl shadow-lg p-6 transform hover:scale-105 transition-all duration-300 w-full max-w-md border border-blue-300/50 hover:shadow-blue-400/50">
+  <div className="bg-gradient-to-br from-[#1E40AF] via-[#2563EB] to-[#3B82F6] rounded-2xl shadow-lg p-6 transform hover:scale-105 transition-all duration-300 w-full max-w-md border border-blue-300/50 hover:shadow-2xl">
     <div className="text-center">
       <h3 className="text-2xl font-bold text-white mb-2">{title}</h3>
       <h2 className="text-2xl font-bold text-white mb-1">{name}</h2>
@@ -29,7 +29,7 @@ const CommitteeCard = ({ title, name, position, department }) => (
 );
 
 const SecretarySection = ({ title, members }) => (
-  <div className="bg-gradient-to-br from-[#1E3A8A] via-[#2563EB] to-[#3B82F6] rounded-xl p-6 shadow-lg border border-blue-300/30 hover:shadow-blue-500/50 transition-all duration-300">
+  <div className="bg-gradient-to-br from-[#1E3A8A] via-[#2563EB] to-[#3B82F6] rounded-xl p-6 shadow-lg border border-blue-300/30 hover:shadow-2xl transition-all duration-300">
     <h3 className="text-xl font-semibold text-white mb-4 text-center border-b border-blue-400 pb-2">
       {title}
     </h3>

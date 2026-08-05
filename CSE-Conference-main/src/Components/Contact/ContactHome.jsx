@@ -5,7 +5,7 @@ import backgroundImage from "../../assets/Images/cs2.jpg"; // Add your backgroun
 
 const ProfessorCard = (props) => {
   return (
-    <div className="border bg-white p-5 rounded-xl hover:scale-105 text-center transition-all hover:bg-blue-50 shadow-lg shadow-blue-900 w-full h-[180px] flex flex-col justify-center">
+    <div className="border border-slate-100 bg-white p-5 rounded-xl hover:scale-105 text-center transition-all shadow-md hover:shadow-lg w-full h-[180px] flex flex-col justify-center">
       <h1 className="font-bold text-blue-800 text-lg">{props.name}</h1>
       <h1 className="flex items-center gap-2 text-left">
         <FaGraduationCap size={20} className="text-blue-700" />

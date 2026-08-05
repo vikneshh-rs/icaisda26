@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import {
   FileText,
   Layers,
@@ -28,7 +29,8 @@ const Registration = () => {
       ],
       bg: "bg-gradient-to-b from-blue-50/70 to-blue-100/30",
       border: "border-blue-200",
-      textColor: "text-blue-900"
+      textColor: "text-blue-900",
+      btnText: "Register & Submit Paper"
     },
     {
       title: "Join as a Presenter",
@@ -41,7 +43,8 @@ const Registration = () => {
       ],
       bg: "bg-gradient-to-b from-cyan-50/70 to-cyan-100/30",
       border: "border-cyan-200",
-      textColor: "text-cyan-900"
+      textColor: "text-cyan-900",
+      btnText: "Register Abstract"
     },
     {
       title: "Join as a Listener",
@@ -55,7 +58,8 @@ const Registration = () => {
       ],
       bg: "bg-gradient-to-b from-emerald-50/70 to-emerald-100/30",
       border: "border-emerald-200",
-      textColor: "text-emerald-900"
+      textColor: "text-emerald-900",
+      btnText: "Register as Listener"
     }
   ];
 
@@ -89,21 +93,21 @@ const Registration = () => {
         </div>
 
         {/* SLIDER / MARQUEE BANNER */}
-        <div className="w-full bg-blue-50/80 border-y border-blue-100 py-3 overflow-hidden rounded-xl shadow-inner relative">
-          <div className="animate-marquee whitespace-nowrap text-sm md:text-base font-bold text-blue-700 uppercase tracking-widest flex items-center gap-16">
-            <span>🎉 Registration Opens Soon</span>
-            <span>⚡ Registration Opens Soon</span>
-            <span>🎉 Registration Opens Soon</span>
-            <span>⚡ Registration Opens Soon</span>
-            <span>🎉 Registration Opens Soon</span>
-            <span>⚡ Registration Opens Soon</span>
+        <div className="w-full bg-emerald-50/80 border-y border-emerald-100 py-3 overflow-hidden rounded-xl shadow-inner relative">
+          <div className="animate-marquee whitespace-nowrap text-sm md:text-base font-bold text-emerald-700 uppercase tracking-widest flex items-center gap-16">
+            <span>🎉 Registration is Now Open</span>
+            <span>⚡ Submit Paper & Payment Proof Online</span>
+            <span>🎉 Registration is Now Open</span>
+            <span>⚡ Submit Paper & Payment Proof Online</span>
+            <span>🎉 Registration is Now Open</span>
+            <span>⚡ Submit Paper & Payment Proof Online</span>
             {/* Duplicate for seamless loop */}
-            <span>🎉 Registration Opens Soon</span>
-            <span>⚡ Registration Opens Soon</span>
-            <span>🎉 Registration Opens Soon</span>
-            <span>⚡ Registration Opens Soon</span>
-            <span>🎉 Registration Opens Soon</span>
-            <span>⚡ Registration Opens Soon</span>
+            <span>🎉 Registration is Now Open</span>
+            <span>⚡ Submit Paper & Payment Proof Online</span>
+            <span>🎉 Registration is Now Open</span>
+            <span>⚡ Submit Paper & Payment Proof Online</span>
+            <span>🎉 Registration is Now Open</span>
+            <span>⚡ Submit Paper & Payment Proof Online</span>
           </div>
           <style>
             {`
@@ -120,12 +124,22 @@ const Registration = () => {
           </style>
         </div>
 
+        {/* REGISTER NOW BUTTON */}
+        <div className="flex justify-center pt-2">
+          <Link
+            to="/paperregistration"
+            className="px-10 py-3.5 bg-blue-900 hover:bg-blue-950 text-white font-bold text-sm md:text-base rounded-lg border border-blue-900 shadow-md hover:shadow-lg hover:scale-[1.01] transition-all duration-300 tracking-widest uppercase"
+          >
+            Register Now
+          </Link>
+        </div>
+
         {/* 3 CARDS SECTION */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {cards.map((card, idx) => (
             <div
               key={idx}
-              className={`bg-white border ${card.border} ${card.bg} rounded-2xl p-8 flex flex-col justify-between shadow-lg hover:shadow-xl hover:scale-[1.02] transition-all duration-300`}
+              className={`bg-white border ${card.border} ${card.bg} rounded-2xl p-8 flex flex-col shadow-lg hover:shadow-xl hover:scale-[1.02] transition-all duration-300`}
             >
               <div className="space-y-6">
                 <div className="flex items-center justify-between">

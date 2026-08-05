@@ -25,9 +25,8 @@ const Timeline = () => {
         {images.map((image, index) => (
           <div
             key={index}
-            className={`absolute inset-0 w-full h-full bg-cover bg-center transition-opacity duration-1000 ${
-              index === currentImage ? "opacity-100" : "opacity-0"
-            }`}
+            className={`absolute inset-0 w-full h-full bg-cover bg-center transition-opacity duration-1000 ${index === currentImage ? "opacity-100" : "opacity-0"
+              }`}
             style={{ backgroundImage: `url(${image})` }}
           />
         ))}
@@ -42,10 +41,10 @@ const Timeline = () => {
         <table className="text-lg border-separate border-spacing-3 text-white w-full">
           <tbody>
             {[
-              ["Full Paper Submission Deadline", "16th August 2026"],
-              ["Acceptance Intimation", "1st September 2026"],
-              ["Registration Deadline", "1st October 2026"],
-              ["Conference Date", "29-30 December 2026"],
+              ["Full Paper Submission Deadline", "31st August 2026"],
+              ["Acceptance Intimation", "21st September 2026"],
+              ["Registration Deadline", "19th October 2026"],
+              ["Conference Date", "12-13 November 2026"],
             ].map((row, index) => (
               <tr key={index} className="bg-black/40 border border-white/50 rounded-lg">
                 <th className="font-medium px-4 py-3 text-left border border-gray-400 rounded-lg drop-shadow-lg">{row[0]}</th>

@@ -5,6 +5,8 @@ import CallforPaper from "./Pages/CallforPaper";
 import PaperSubmission from "./Pages/PaperSubmission";
 import Registration from "./Pages/Registration";
 import PaperRegistration from "./Pages/PaperRegistration";
+import ListenerRegistration from "./Pages/ListenerRegistration";
+import AdminDashboard from "./Pages/AdminDashboard";
 import Committees from "./Pages/Committees";
 import Contact from "./Pages/Contact";
 import Timeline from "./Pages/Timeline";
@@ -24,6 +26,8 @@ export default function App() {
             <Route path="papersubmission" element={<PaperSubmission />} />
             <Route path="registration" element={<Registration />} />
             <Route path="paperregistration" element={<PaperRegistration />} />
+            <Route path="listenerregistration" element={<ListenerRegistration />} />
+            <Route path="admin" element={<AdminDashboard />} />
             <Route path="login" element={<LoginPage />} />
             <Route path="committees" element={<Committees />} />
             <Route path="contact" element={<Contact />} />

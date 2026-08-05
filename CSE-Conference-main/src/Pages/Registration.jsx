@@ -30,7 +30,9 @@ const Registration = () => {
       bg: "bg-gradient-to-b from-blue-50/70 to-blue-100/30",
       border: "border-blue-200",
       textColor: "text-blue-900",
-      btnText: "Register & Submit Paper"
+      btnText: "Register & Submit Paper",
+      link: "/paperregistration",
+      btnBg: "bg-blue-600 hover:bg-blue-700"
     },
     {
       title: "Join as a Presenter",
@@ -44,7 +46,9 @@ const Registration = () => {
       bg: "bg-gradient-to-b from-cyan-50/70 to-cyan-100/30",
       border: "border-cyan-200",
       textColor: "text-cyan-900",
-      btnText: "Register Abstract"
+      btnText: "Register Abstract",
+      link: "/paperregistration",
+      btnBg: "bg-cyan-600 hover:bg-cyan-700"
     },
     {
       title: "Join as a Listener",
@@ -59,7 +63,9 @@ const Registration = () => {
       bg: "bg-gradient-to-b from-emerald-50/70 to-emerald-100/30",
       border: "border-emerald-200",
       textColor: "text-emerald-900",
-      btnText: "Register as Listener"
+      btnText: "Register as Listener",
+      link: "/listenerregistration",
+      btnBg: "bg-emerald-600 hover:bg-emerald-700"
     }
   ];
 
@@ -139,9 +145,9 @@ const Registration = () => {
           {cards.map((card, idx) => (
             <div
               key={idx}
-              className={`bg-white border ${card.border} ${card.bg} rounded-2xl p-8 flex flex-col shadow-lg hover:shadow-xl hover:scale-[1.02] transition-all duration-300`}
+              className={`bg-white border ${card.border} ${card.bg} rounded-2xl p-8 flex flex-col justify-between shadow-lg hover:shadow-xl hover:scale-[1.02] transition-all duration-300`}
             >
-              <div className="space-y-6">
+              <div className="space-y-6 flex-grow">
                 <div className="flex items-center justify-between">
                   <span className="text-xs font-bold uppercase tracking-wider text-slate-500">{card.title}</span>
                   {card.icon}
@@ -157,6 +163,15 @@ const Registration = () => {
                     </li>
                   ))}
                 </ul>
+              </div>
+
+              <div className="pt-6">
+                <Link
+                  to={card.link}
+                  className={`block text-center py-3 rounded-xl text-white font-bold text-sm transition-all duration-300 hover:shadow-md hover:scale-[1.01] ${card.btnBg}`}
+                >
+                  {card.btnText}
+                </Link>
               </div>
             </div>
           ))}

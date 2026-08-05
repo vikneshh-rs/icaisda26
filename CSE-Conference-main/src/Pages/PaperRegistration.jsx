@@ -105,9 +105,6 @@ const getFee = (type, category) => {
     if (category === "Academicians") return { inr: "₹3,000", usd: "$75" };
     if (category === "Scholars") return { inr: "₹2,500", usd: "$60" };
     if (category === "PG and UG Students") return { inr: "₹2,000", usd: "$50" };
-  } else if (type === "Listener") {
-    if (category === "Co-authors, Scholars, and others") return { inr: "₹2,000", usd: "$40" };
-    if (category === "UG and PG students") return { inr: "₹1,000", usd: "$25" };
   }
   return null;
 };
@@ -119,9 +116,6 @@ const getCategoriesForType = (type) => {
   if (type === "Presenter - Abstract Only") {
     return ["Academicians", "Scholars", "PG and UG Students"];
   }
-  if (type === "Listener") {
-    return ["Co-authors, Scholars, and others", "UG and PG students"];
-  }
   return [];
 };
 
@@ -130,21 +124,19 @@ export default function PaperRegistration() {
   const [topic, setTopic] = useState('');
   const [successMessage, setSuccessMessage] = useState('');
   const [loading, setLoading] = useState(false);
-  const [paperSource, setPaperSource] = useState('file'); // 'file' or 'link'
   const [customDomain, setCustomDomain] = useState('');
   const [customTopic, setCustomTopic] = useState('');
   const [registrationType, setRegistrationType] = useState('');
   const [participantRegion, setParticipantRegion] = useState('Indian'); // 'Indian' or 'International'
 
   const [form, setForm] = useState({
+    paperId: '',
     paperTitle: '',
     author: '',
     email: '',
     designation: '',
     contactNo: '',
     modeOfParticipation: '',
-    googleDriveLink: '',
-    paperFile: null,
     modeOfPayment: '',
     utrNo: '',
     dateOfTransfer: '',
@@ -253,16 +245,6 @@ export default function PaperRegistration() {
       return;
     }
 
-    if (paperSource === 'file' && !form.paperFile) {
-      alert('Please upload your paper file.');
-      return;
-    }
-
-    if (paperSource === 'link' && !form.googleDriveLink) {
-      alert('Please provide a Google Drive link for your paper.');
-      return;
-    }
-
     setLoading(true);
 
     try {
@@ -276,23 +258,12 @@ export default function PaperRegistration() {
         );
       }
 
-      // 2. Upload Paper File (if file source selected)
-      let paperFileURL = null;
-      if (paperSource === 'file' && form.paperFile) {
-        paperFileURL = await uploadToSupabase(
-          form.paperFile,
-          'conference-files',
-          'papers'
-        );
-      } else if (paperSource === 'link') {
-        paperFileURL = form.googleDriveLink;
-      }
-
-      // 3. Store metadata in Supabase Table
+      // 2. Store metadata in Supabase Table
       const { data, error } = await supabase
         .from('paper_submissions')
         .insert([
           {
+            paper_id: form.paperId,
             paper_title: form.paperTitle,
             author: form.author,
             email: form.email,
@@ -301,8 +272,6 @@ export default function PaperRegistration() {
             mode_of_participation: form.modeOfParticipation,
             domain: domain === 'Others' ? customDomain : domain,
             topic: domain === 'Others' ? customTopic : topic,
-            submission_type: paperSource,
-            file_url: paperFileURL,
             payment_proof_url: paymentProofURL,
             mode_of_payment: form.modeOfPayment,
             utr_no: form.utrNo,
@@ -362,6 +331,19 @@ export default function PaperRegistration() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="space-y-1.5 md:col-span-2">
+                <label className="text-sm font-semibold text-slate-700">Paper ID <span className='text-red-500'>*</span></label>
+                <input
+                  type="text"
+                  name="paperId"
+                  placeholder="Enter your Paper ID (e.g. ICAISDA-101)"
+                  value={form.paperId}
+                  onChange={handleChange}
+                  required
+                  className="w-full border border-slate-200 rounded-xl p-3 focus:outline-none focus:ring-2 focus:ring-blue-500 text-slate-850"
+                />
+              </div>
+
+              <div className="space-y-1.5 md:col-span-2">
                 <label className="text-sm font-semibold text-slate-700">Paper Title <span className='text-red-500'>*</span></label>
                 <input
                   type="text"
@@ -414,7 +396,6 @@ export default function PaperRegistration() {
                   <option value="">Select Registration Type</option>
                   <option value="Presenter - Full Paper">Presenter - Full Paper Publication</option>
                   <option value="Presenter - Abstract Only">Presenter - Abstract Only</option>
-                  <option value="Listener">Listener</option>
                 </select>
               </div>
 
@@ -581,86 +562,7 @@ export default function PaperRegistration() {
             )}
           </div>
 
-          {/* SECTION 2: PAPER UPLOAD OPTIONS */}
-          <div className="space-y-6 pt-6 border-t border-slate-100">
-            <div className="flex items-center justify-between pb-2 border-b border-slate-100">
-              <div className="flex items-center gap-2">
-                <UploadCloud className="w-5 h-5 text-indigo-600" />
-                <h2 className="text-lg font-bold text-slate-800">Manuscript Submission</h2>
-              </div>
-            </div>
-
-            <div className="space-y-4">
-              <label className="text-sm font-semibold text-slate-700 block">Choose Submission Method:</label>
-              
-              <div className="grid grid-cols-2 gap-4">
-                <button
-                  type="button"
-                  onClick={() => setPaperSource('file')}
-                  className={`flex flex-col items-center gap-2 p-4 border rounded-2xl transition hover:bg-slate-50 ${
-                    paperSource === 'file' 
-                      ? 'border-blue-500 bg-blue-50/55 ring-2 ring-blue-500/20' 
-                      : 'border-slate-200'
-                  }`}
-                >
-                  <UploadCloud className={`w-6 h-6 ${paperSource === 'file' ? 'text-blue-600' : 'text-slate-400'}`} />
-                  <span className="text-xs md:text-sm font-bold text-slate-800">Upload PDF / Word</span>
-                </button>
-
-                <button
-                  type="button"
-                  onClick={() => setPaperSource('link')}
-                  className={`flex flex-col items-center gap-2 p-4 border rounded-2xl transition hover:bg-slate-50 ${
-                    paperSource === 'link' 
-                      ? 'border-blue-500 bg-blue-50/55 ring-2 ring-blue-500/20' 
-                      : 'border-slate-200'
-                  }`}
-                >
-                  <Link2 className={`w-6 h-6 ${paperSource === 'link' ? 'text-blue-600' : 'text-slate-400'}`} />
-                  <span className="text-xs md:text-sm font-bold text-slate-800">Google Drive Link</span>
-                </button>
-              </div>
-
-              {paperSource === 'file' ? (
-                <div className="p-6 border-2 border-dashed border-slate-200 rounded-2xl flex flex-col items-center justify-center bg-slate-50/50 hover:bg-slate-50 transition relative">
-                  <UploadCloud className="w-10 h-10 text-slate-400 mb-2" />
-                  <span className="text-sm text-slate-600 font-medium">Click to select files or drag here</span>
-                  <span className="text-xs text-slate-400 mt-1">Accepts PDF, DOC, or DOCX (Max size 5MB)</span>
-                  <input
-                    type="file"
-                    name="paperFile"
-                    accept=".pdf,.doc,.docx"
-                    onChange={handleChange}
-                    className="absolute inset-0 opacity-0 cursor-pointer"
-                  />
-                  {form.paperFile && (
-                    <div className="mt-4 p-2 bg-blue-50 border border-blue-200 text-blue-800 rounded-lg text-xs font-bold flex items-center gap-2">
-                      <CheckCircle className="w-4 h-4 text-blue-600" />
-                      Selected: {form.paperFile.name}
-                    </div>
-                  )}
-                </div>
-              ) : (
-                <div className="space-y-1.5">
-                  <label className="text-sm font-semibold text-slate-700">Google Drive Sharing Link <span className='text-red-500'>*</span></label>
-                  <input
-                    type="url"
-                    name="googleDriveLink"
-                    placeholder="https://drive.google.com/file/d/..."
-                    value={form.googleDriveLink}
-                    onChange={handleChange}
-                    className="w-full border border-slate-200 rounded-xl p-3 focus:outline-none focus:ring-2 focus:ring-blue-500 text-slate-850"
-                  />
-                  <p className="text-xs text-slate-400 flex items-center gap-1">
-                    <AlertCircle className="w-3.5 h-3.5 text-amber-500 shrink-0" />
-                    Please ensure the link permission is set to "Anyone with the link can view".
-                  </p>
-                </div>
-              )}
-            </div>
-          </div>
-
-          {/* SECTION 3: PAYMENT DETAILS */}
+          {/* SECTION 2: PAYMENT DETAILS */}
           <div className="space-y-6 pt-6 border-t border-slate-100">
             <div className="flex items-center gap-2 pb-2 border-b border-slate-100">
               <CreditCard className="w-5 h-5 text-emerald-600" />

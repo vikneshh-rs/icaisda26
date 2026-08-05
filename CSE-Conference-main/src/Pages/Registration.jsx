@@ -130,15 +130,7 @@ const Registration = () => {
           </style>
         </div>
 
-        {/* REGISTER NOW BUTTON */}
-        <div className="flex justify-center pt-2">
-          <Link
-            to="/paperregistration"
-            className="px-10 py-3.5 bg-blue-900 hover:bg-blue-950 text-white font-bold text-sm md:text-base rounded-lg border border-blue-900 shadow-md hover:shadow-lg hover:scale-[1.01] transition-all duration-300 tracking-widest uppercase"
-          >
-            Register Now
-          </Link>
-        </div>
+
 
         {/* 3 CARDS SECTION */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -168,7 +160,7 @@ const Registration = () => {
               <div className="pt-6">
                 <Link
                   to={card.link}
-                  className={`block text-center py-3 rounded-xl text-white font-bold text-sm transition-all duration-300 hover:shadow-md hover:scale-[1.01] ${card.btnBg}`}
+                  className={`block text-center py-4 rounded-2xl text-white font-extrabold text-base md:text-lg transition-all duration-300 hover:shadow-lg hover:scale-[1.02] ${card.btnBg}`}
                 >
                   {card.btnText}
                 </Link>

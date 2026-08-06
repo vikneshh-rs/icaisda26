@@ -41,6 +41,16 @@ const Guidelines = () => {
         </p>
 
         <div className="flex flex-col md:flex-row gap-4 justify-center items-center">
+          {/* Submit Paper Button */}
+          <a
+            href="https://meteor.springer.com/ICAISDA"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-lg bg-gradient-to-tr from-blue-600 via-blue-500 to-blue-600 hover:opacity-90 px-6 py-2 rounded-full font-semibold transition"
+          >
+            📤 Submit Paper
+          </a>
+
           {/* Paper Format Button */}
           <a
             href="https://www.atlantis-press.com/policies"

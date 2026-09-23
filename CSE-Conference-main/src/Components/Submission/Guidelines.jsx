@@ -36,8 +36,12 @@ const Guidelines = () => {
         <p className="text-blue-700 text-center text-lg md:text-2xl font-semibold mb-2">
           Submit your paper and follow the official format
         </p>
-        <p className="text-blue-900 text-center text-lg md:text-2xl font-semibold mb-4">
-          Last Date for Paper Submission: <b>31st August 2026</b>
+        <p className="text-blue-900 text-center text-lg md:text-2xl font-semibold mb-2">
+          Last Date for Paper Submission: <b>21st September 2026</b>
+        </p>
+        <p className="text-blue-800 text-center text-sm md:text-base font-medium mb-4">
+          Last Date for Registration: <b>28th September 2026</b> &nbsp;|&nbsp; Registration Closing: <b>10th October 2026</b>
+          <span className="block text-xs md:text-sm text-amber-900 mt-1 font-semibold">⚠️ Processing charge of Rs. 1,000 will be charged for Late Submission.</span>
         </p>
 
         <div className="flex flex-col md:flex-row gap-4 justify-center items-center">

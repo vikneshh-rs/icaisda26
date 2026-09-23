@@ -1,0 +1,9 @@
+{
+  "name": "cse-conference-root",
+  "private": true,
+  "scripts": {
+    "dev": "npm --prefix CSE-Conference-main run dev",
+    "build": "npm --prefix CSE-Conference-main run build",
+    "serve": "npm --prefix CSE-Conference-main run serve"
+  }
+}

@@ -101,20 +101,16 @@ const Registration = () => {
 
         {/* SLIDER / MARQUEE BANNER */}
         <div className="w-full bg-emerald-50/80 border-y border-emerald-100 py-3 overflow-hidden rounded-xl shadow-inner relative">
-          <div className="animate-marquee whitespace-nowrap text-sm md:text-base font-bold text-emerald-700 uppercase tracking-widest flex items-center gap-16">
+          <div className="animate-marquee whitespace-nowrap text-sm md:text-base font-bold text-emerald-700 uppercase tracking-widest flex items-center gap-12">
             <span>🎉 Registration is Now Open</span>
-            <span>⚡ Submit Paper & Payment Proof Online</span>
-            <span>🎉 Registration is Now Open</span>
-            <span>⚡ Submit Paper & Payment Proof Online</span>
-            <span>🎉 Registration is Now Open</span>
-            <span>⚡ Submit Paper & Payment Proof Online</span>
+            <span>📅 Last Date for Registration: 28-09-2026</span>
+            <span>🔒 Registration Closing: 10-10-2026</span>
+            <span>⚠️ Late Submission Processing Charge: Rs. 1,000</span>
             {/* Duplicate for seamless loop */}
             <span>🎉 Registration is Now Open</span>
-            <span>⚡ Submit Paper & Payment Proof Online</span>
-            <span>🎉 Registration is Now Open</span>
-            <span>⚡ Submit Paper & Payment Proof Online</span>
-            <span>🎉 Registration is Now Open</span>
-            <span>⚡ Submit Paper & Payment Proof Online</span>
+            <span>📅 Last Date for Registration: 28-09-2026</span>
+            <span>🔒 Registration Closing: 10-10-2026</span>
+            <span>⚠️ Late Submission Processing Charge: Rs. 1,000</span>
           </div>
           <style>
             {`
@@ -125,10 +121,38 @@ const Registration = () => {
               .animate-marquee {
                 display: flex;
                 width: max-content;
-                animation: marquee 20s linear infinite;
+                animation: marquee 22s linear infinite;
               }
             `}
           </style>
+        </div>
+
+        {/* REGISTRATION DEADLINES & LATE FEE BANNER */}
+        <div className="bg-gradient-to-br from-blue-900 via-indigo-900 to-slate-900 text-white rounded-3xl p-6 md:p-8 shadow-xl border border-blue-400/30 flex flex-col lg:flex-row items-center justify-between gap-6">
+          <div className="space-y-2 text-center lg:text-left">
+            <span className="inline-flex items-center gap-1.5 bg-blue-500/30 border border-blue-400/40 text-blue-200 text-xs uppercase px-3 py-1 rounded-full font-bold tracking-wider">
+              Registration Schedule
+            </span>
+            <h3 className="text-xl md:text-2xl font-black text-white">Important Registration Dates</h3>
+            <p className="text-slate-300 text-sm">Please adhere to the registration timeline to confirm your participation.</p>
+          </div>
+
+          <div className="flex flex-wrap items-center justify-center gap-4">
+            <div className="bg-white/10 backdrop-blur-md border border-white/20 px-5 py-3.5 rounded-2xl text-center">
+              <span className="text-xs text-blue-200 block font-medium uppercase tracking-wider">Last Date for Registration</span>
+              <span className="text-lg md:text-xl font-black text-emerald-300">28th September 2026</span>
+            </div>
+
+            <div className="bg-white/10 backdrop-blur-md border border-white/20 px-5 py-3.5 rounded-2xl text-center">
+              <span className="text-xs text-rose-200 block font-medium uppercase tracking-wider">Registration Closing</span>
+              <span className="text-lg md:text-xl font-black text-rose-300">10th October 2026</span>
+            </div>
+          </div>
+
+          <div className="w-full lg:w-auto bg-amber-500/20 border border-amber-400/50 p-4 rounded-2xl text-amber-200 text-sm font-semibold flex items-center justify-center gap-3">
+            <AlertCircle className="w-5 h-5 text-amber-300 shrink-0" />
+            <span>Processing charge of <strong className="text-amber-300 font-bold">Rs. 1,000</strong> will be charged for Late Submission.</span>
+          </div>
         </div>
 
 
@@ -189,6 +213,12 @@ const Registration = () => {
                 <Users2 className="w-6 h-6 text-cyan-600 shrink-0 mt-1" />
                 <p>
                   A maximum of <strong>three authors</strong> is permitted under a single paper registration. If a paper has more than three authors, all authors may be listed in the paper. However, authors beyond the first three must register separately under the <strong>Listener</strong> category if they wish to participate.
+                </p>
+              </div>
+              <div className="flex gap-3 bg-amber-100/60 p-3.5 rounded-xl border border-amber-300">
+                <AlertCircle className="w-6 h-6 text-amber-700 shrink-0 mt-0.5" />
+                <p className="text-amber-950 font-medium">
+                  <strong>Key Registration Deadlines:</strong> The last date for registration is <strong>28th September 2026</strong>. Final registration closes on <strong>10th October 2026</strong>. A processing charge of <strong>Rs. 1,000</strong> will be charged for Late Submission.
                 </p>
               </div>
             </div>
@@ -311,6 +341,10 @@ const Registration = () => {
             <p className="flex items-center gap-2 text-slate-600">
               <span className="w-1.5 h-1.5 rounded-full bg-cyan-600 shrink-0"></span>
               Completed registrations will be acknowledged by the Organizing Committee within 2-5 workdays after receiving your payment.
+            </p>
+            <p className="flex items-center gap-2 text-amber-800 font-semibold bg-amber-50 p-2.5 rounded-xl border border-amber-200">
+              <span className="w-2 h-2 rounded-full bg-amber-500 shrink-0"></span>
+              A processing charge of Rs. 1,000 will be charged for Late Submission.
             </p>
           </div>
         </div>

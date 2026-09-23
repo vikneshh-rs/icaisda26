@@ -236,6 +236,26 @@ export default function ListenerRegistration() {
               <div className="w-20 h-1 bg-emerald-600 mx-auto rounded-full mt-4"></div>
             </div>
 
+        {/* Important Dates Banner */}
+        <div className="mb-8 p-4 md:p-5 bg-gradient-to-r from-slate-900 to-emerald-950 text-white rounded-2xl border border-emerald-500/40 shadow-md">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+            <div className="flex items-center gap-3">
+              <div className="p-2.5 bg-emerald-500/20 rounded-xl border border-emerald-400/30 shrink-0">
+                <AlertCircle className="w-6 h-6 text-emerald-400" />
+              </div>
+              <div className="text-left">
+                <div className="text-xs uppercase tracking-wider text-emerald-200 font-bold">Registration Timeline</div>
+                <div className="text-sm font-semibold text-white">
+                  Last Date: <span className="text-emerald-300 font-bold">28-09-2026</span> &nbsp;|&nbsp; Closing: <span className="text-rose-300 font-bold">10-10-2026</span>
+                </div>
+              </div>
+            </div>
+            <div className="bg-amber-400/20 border border-yellow-300/40 px-4 py-2 rounded-xl text-yellow-200 text-xs md:text-sm font-semibold text-center">
+              ⚠️ Processing charge of <strong className="text-yellow-300">Rs. 1,000</strong> will be charged for Late Submission.
+            </div>
+          </div>
+        </div>
+
         {successMessage && (
           <div className="mb-6 p-4 bg-emerald-50 border border-emerald-200 text-emerald-800 rounded-xl font-semibold text-center flex items-center justify-center gap-2">
             <CheckCircle className="w-5 h-5 text-emerald-600" />

@@ -313,6 +313,26 @@ export default function PaperRegistration() {
           <div className="w-20 h-1 bg-blue-600 mx-auto rounded-full mt-4"></div>
         </div>
 
+        {/* Important Dates & Late Fee Banner */}
+        <div className="mb-8 p-4 md:p-5 bg-gradient-to-r from-blue-900 to-indigo-900 text-white rounded-2xl border border-blue-400/40 shadow-md">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+            <div className="flex items-center gap-3">
+              <div className="p-2.5 bg-blue-500/20 rounded-xl border border-blue-400/30 shrink-0">
+                <AlertCircle className="w-6 h-6 text-yellow-300" />
+              </div>
+              <div className="text-left">
+                <div className="text-xs uppercase tracking-wider text-blue-200 font-bold">Important Registration Schedule</div>
+                <div className="text-sm font-semibold text-white">
+                  Last Date: <span className="text-emerald-300 font-bold">28-09-2026</span> &nbsp;|&nbsp; Closing: <span className="text-rose-300 font-bold">10-10-2026</span>
+                </div>
+              </div>
+            </div>
+            <div className="bg-amber-400/20 border border-yellow-300/40 px-4 py-2 rounded-xl text-yellow-200 text-xs md:text-sm font-semibold text-center">
+              ⚠️ Processing charge of <strong className="text-yellow-300">Rs. 1,000</strong> will be charged for Late Submission.
+            </div>
+          </div>
+        </div>
+
         {successMessage && (
           <div className="mb-6 p-4 bg-emerald-50 border border-emerald-200 text-emerald-800 rounded-xl font-semibold text-center flex items-center justify-center gap-2">
             <CheckCircle className="w-5 h-5 text-emerald-600" />
@@ -628,6 +648,11 @@ export default function PaperRegistration() {
                   <span className="text-xs text-slate-400 mt-2">Scan with GPay, PhonePe, or any UPI app</span>
                 </div>
               )}
+            </div>
+
+            <div className="p-3 bg-amber-50 border border-amber-200 rounded-xl text-xs md:text-sm text-amber-800 font-medium flex items-center gap-2">
+              <AlertCircle className="w-4 h-4 text-amber-600 shrink-0" />
+              <span><strong>Note:</strong> Last date for registration is <strong>28-09-2026</strong> (Registration Closing: <strong>10-10-2026</strong>). A processing charge of <strong>Rs. 1,000</strong> will be charged for Late Submission.</span>
             </div>
 
             {/* Payment Fields */}

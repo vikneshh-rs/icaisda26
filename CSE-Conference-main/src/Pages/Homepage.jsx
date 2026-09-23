@@ -5,6 +5,7 @@ import Intro from "../Components/Home/Intro";
 import PTU from "../Components/Home/PTU";
 import CSE from "../Components/Home/CSE";
 import Speakers from "../Components/Home/Speakers";
+import Sponsors from "../Components/Home/Sponsors";
 //import Accommodation from "../Components/Home/Accommodation";
 
 
@@ -19,7 +20,8 @@ const Homepage = () => {
       <PTU />
       <CSE />
       
-      <Speakers /> 
+      <Speakers />
+      <Sponsors /> 
     </div>
   );
 };

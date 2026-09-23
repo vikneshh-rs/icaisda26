@@ -147,25 +147,54 @@ const Speakers = () => {
         <table className="md:text-lg border-separate border-spacing-3 text-white w-full">
           <tbody>
             {[
-              ["Full Paper Submission Deadline", "31st August, 2026"],
-              ["Acceptance Intimation", "27th September, 2026"],
-              ["Registration Deadline", "19th October, 2026"],
-              ["Conference Date", "12 - 13, November, 2026"],
+              {
+                label: "Full Paper Submission Deadline",
+                oldDate: "31st August, 2026",
+                newDate: "21st September, 2026",
+              },
+              {
+                label: "Acceptance Intimation",
+                oldDate: "27th September, 2026",
+                newDate: "4th October, 2026",
+              },
+              {
+                label: "Last Date for Registration",
+                newDate: "28th September, 2026",
+              },
+              {
+                label: "Registration Closing Date",
+                newDate: "10th October, 2026",
+              },
+              {
+                label: "Conference Date",
+                newDate: "12 - 13, November, 2026",
+              },
             ].map((row, index) => (
               <tr
                 key={index}
-                className="bg-blue-600/80 border border-blue-300 rounded-lg transition duration-500 hover:bg-blue-00 hover:text-yellow-300"
+                className="bg-blue-600/80 border border-blue-300 rounded-lg transition duration-500 hover:bg-blue-700 hover:text-yellow-300"
               >
-                <th className="font-medium px-4 py-3 text-left border border-blue-300 rounded-lg drop-shadow-lg">
-                  {row[0]}
+                <th className="font-medium px-4 py-3 text-left border border-blue-300 rounded-lg drop-shadow-lg w-1/2">
+                  {row.label}
                 </th>
-                <th className="font-medium px-4 py-3 text-left border border-blue-300 rounded-lg drop-shadow-lg">
-                  {row[1]}
+                <th className="font-medium px-4 py-3 text-left border border-blue-300 rounded-lg drop-shadow-lg w-1/2">
+                  {row.oldDate && (
+                    <span className="line-through text-blue-300/60 mr-3">
+                      {row.oldDate}
+                    </span>
+                  )}
+                  <span>{row.newDate}</span>
                 </th>
               </tr>
             ))}
           </tbody>
         </table>
+
+        {/* Late Submission Notice */}
+        <div className="w-full bg-amber-400/20 border border-yellow-300/60 rounded-xl p-3 md:p-4 text-yellow-200 text-sm md:text-base font-semibold flex items-center justify-center gap-2">
+          <span className="text-xl">⚠️</span>
+          <span>Processing charge of <strong className="text-yellow-300 font-bold">Rs.1,000</strong> will be charged for Late Submission.</span>
+        </div>
       </div>
     </div>
   );

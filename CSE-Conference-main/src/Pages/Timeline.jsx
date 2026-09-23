@@ -41,18 +41,49 @@ const Timeline = () => {
         <table className="text-lg border-separate border-spacing-3 text-white w-full">
           <tbody>
             {[
-              ["Full Paper Submission Deadline", "31st August 2026"],
-              ["Acceptance Intimation", "27th September 2026"],
-              ["Registration Deadline", "19th October 2026"],
-              ["Conference Date", "12-13 November 2026"],
+              {
+                label: "Full Paper Submission Deadline",
+                oldDate: "31st August, 2026",
+                newDate: "21st September, 2026",
+              },
+              {
+                label: "Acceptance Intimation",
+                oldDate: "27th September, 2026",
+                newDate: "4th October, 2026",
+              },
+              {
+                label: "Last Date for Registration",
+                newDate: "28th September, 2026",
+              },
+              {
+                label: "Registration Closing Date",
+                newDate: "10th October, 2026",
+              },
+              {
+                label: "Conference Date",
+                newDate: "12 - 13, November, 2026",
+              },
             ].map((row, index) => (
               <tr key={index} className="bg-black/40 border border-white/50 rounded-lg">
-                <th className="font-medium px-4 py-3 text-left border border-gray-400 rounded-lg drop-shadow-lg">{row[0]}</th>
-                <th className="font-medium px-4 py-3 text-left border border-gray-400 rounded-lg drop-shadow-lg">{row[1]}</th>
+                <th className="font-medium px-4 py-3 text-left border border-gray-400 rounded-lg drop-shadow-lg w-1/2">{row.label}</th>
+                <th className="font-medium px-4 py-3 text-left border border-gray-400 rounded-lg drop-shadow-lg w-1/2">
+                  {row.oldDate && (
+                    <span className="line-through text-gray-400 mr-3">
+                      {row.oldDate}
+                    </span>
+                  )}
+                  <span>{row.newDate}</span>
+                </th>
               </tr>
             ))}
           </tbody>
         </table>
+
+        {/* Late Submission Notice */}
+        <div className="w-full bg-amber-500/20 border border-amber-400/60 rounded-xl p-4 text-amber-200 text-sm md:text-base font-semibold flex items-center justify-center gap-2">
+          <span className="text-xl">⚠️</span>
+          <span>Processing charge of <strong className="text-amber-300 font-bold">Rs.1,000</strong> will be charged for Late Submission.</span>
+        </div>
       </div>
     </div>
   );

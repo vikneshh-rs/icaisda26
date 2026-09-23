@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Hero from "../Components/Home/Hero"; // Adjust the path if necessary
+import AnnouncementSlider from "../Components/Home/AnnouncementSlider";
 import BrochureCarousel from "../Components/Home/BrochureCarousel";
 import Intro from "../Components/Home/Intro";
 import PTU from "../Components/Home/PTU";
@@ -15,6 +16,7 @@ const Homepage = () => {
   return (
     <div>
       <Hero />
+      <AnnouncementSlider />
       <BrochureCarousel />
       <Intro />
       <PTU />

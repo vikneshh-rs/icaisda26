@@ -1,23 +1,29 @@
 import React from "react";
+import speakerBalajiRajendran from "../../assets/Images/keynote-2026/balaji-rajendran.jpg";
+import speakerKrishnaMohan from "../../assets/Images/keynote-2026/krishna-mohan.jpg";
+import speakerPeterRevesz from "../../assets/Images/keynote-2026/peter-revesz.jpg";
+import speakerBalajiPalanisamy from "../../assets/Images/keynote-2026/balaji-palanisamy.jpg";
+import speakerRajarajanSivaraj from "../../assets/Images/keynote-2026/rajarajan-sivaraj.png";
+import nirfBanner from "../../assets/Images/nirf-banner.png";
 
 const Speakers = () => {
   const speakers = [
     {
-      image: "images/keynote-2026/balaji-rajendran.jpg",
+      image: speakerBalajiRajendran,
       name: "Dr. Balaji Rajendran",
       designation: "Scientist F & Group Head",
       university: "Resilient Information Systems and Engineering (RISE), Centre for Development of Advanced Computing (C-DAC), Bengaluru",
       keynote: "Digital Trust Triad: Users, Devices, Agents",
     },
     {
-      image: "images/keynote-2026/krishna-mohan.jpg",
+      image: speakerKrishnaMohan,
       name: "Dr. C. Krishna Mohan",
       designation: "Professor",
       university: "Department of Computer Science and Engineering, IIT Hyderabad",
       keynote: "AI for Healthcare",
     },
     {
-      image: "images/keynote-2026/peter-revesz.jpg",
+      image: speakerPeterRevesz,
       name: "Dr. Peter Z. Revesz",
       designation: "Professor",
       university: "University of Nebraska-Lincoln, Lincoln, USA",
@@ -25,7 +31,7 @@ const Speakers = () => {
         "Computational Decipherment of the Indus Valley Script: Recent Progress and Future Possibilities",
     },
     {
-      image: "images/keynote-2026/balaji-palanisamy.jpg",
+      image: speakerBalajiPalanisamy,
       name: "Dr. Balaji Palanisamy",
       designation: "Associate Professor",
       university: "School of Computing and Information, University of Pittsburgh, USA",
@@ -33,7 +39,7 @@ const Speakers = () => {
         "Adversarial Attacks in Virtual Reality: Detection, Prevention, and Defense",
     },
     {
-      image: "images/keynote-2026/rajarajan-sivaraj.png",
+      image: speakerRajarajanSivaraj,
       name: "Dr. Rajarajan Sivaraj",
       designation: "Vice President of Solution Architecture",
       university: "Aira Technologies, USA",
@@ -97,7 +103,7 @@ const Speakers = () => {
       {/* NIRF Banner */}
       <div className="mt-10 max-w-3xl w-full mx-4">
         <img
-          src="images/nirf-banner.png"
+          src={nirfBanner}
           alt="NIRF Banner"
           className="w-full rounded-xl shadow-lg"
         />

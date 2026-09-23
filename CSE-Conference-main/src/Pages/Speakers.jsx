@@ -1,6 +1,11 @@
 import React, { useEffect, useState, useRef } from "react";
 import * as THREE from "three";
 import NET from "vanta/dist/vanta.net.min";
+import speakerBalajiRajendran from "../assets/Images/keynote-2026/balaji-rajendran.jpg";
+import speakerKrishnaMohan from "../assets/Images/keynote-2026/krishna-mohan.jpg";
+import speakerPeterRevesz from "../assets/Images/keynote-2026/peter-revesz.jpg";
+import speakerBalajiPalanisamy from "../assets/Images/keynote-2026/balaji-palanisamy.jpg";
+import speakerRajarajanSivaraj from "../assets/Images/keynote-2026/rajarajan-sivaraj.png";
 
 const SpeakerCard = ({ image, name, title, organization, topic }) => (
   <div className="bg-white w-full h-full rounded-2xl overflow-hidden shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl flex flex-col">
@@ -31,35 +36,35 @@ const SectionTitle = ({ title }) => (
 function Speakers() {
   const keynoteSpeakers = [
     {
-      image: "images/keynote-2026/balaji-rajendran.jpg",
+      image: speakerBalajiRajendran,
       name: "Dr. Balaji Rajendran",
       title: "Scientist F & Group Head",
       organization: "Resilient Information Systems and Engineering (RISE), Centre for Development of Advanced Computing (C-DAC), Bengaluru",
       topic: "Digital Trust Triad: Users, Devices, Agents"
     },
     {
-      image: "images/keynote-2026/krishna-mohan.jpg",
+      image: speakerKrishnaMohan,
       name: "Dr. C. Krishna Mohan",
       title: "Professor",
       organization: "Department of Computer Science and Engineering, IIT Hyderabad",
       topic: "AI for Healthcare"
     },
     {
-      image: "images/keynote-2026/peter-revesz.jpg",
+      image: speakerPeterRevesz,
       name: "Dr. Peter Z. Revesz",
       title: "Professor",
       organization: "University of Nebraska-Lincoln, Lincoln, USA",
       topic: "Computational Decipherment of the Indus Valley Script: Recent Progress and Future Possibilities"
     },
     {
-      image: "images/keynote-2026/balaji-palanisamy.jpg",
+      image: speakerBalajiPalanisamy,
       name: "Dr. Balaji Palanisamy",
       title: "Associate Professor",
       organization: "School of Computing and Information, University of Pittsburgh, USA",
       topic: "Adversarial Attacks in Virtual Reality: Detection, Prevention, and Defense"
     },
     {
-      image: "images/keynote-2026/rajarajan-sivaraj.png",
+      image: speakerRajarajanSivaraj,
       name: "Dr. Rajarajan Sivaraj",
       title: "Vice President of Solution Architecture",
       organization: "Aira Technologies, USA",

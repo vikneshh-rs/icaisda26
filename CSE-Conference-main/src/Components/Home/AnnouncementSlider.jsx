@@ -21,10 +21,10 @@ const AnnouncementSlider = () => {
     },
     {
       badge: "DEADLINE",
-      title: "Registration Timeline",
-      desc: "Last date: 28-09-2026 | Closing: 10-10-2026 (Rs. 1,000 late fee after 10th October).",
-      link: "#/registration",
-      linkText: "Register Now",
+      title: "Paper Submission & Registration",
+      desc: "Full paper submission & registration deadline: 28-09-2026 | Closing: 10-10-2026.",
+      link: "#/papersubmission",
+      linkText: "Submit / Register",
       icon: <Sparkles className="w-4 h-4 text-amber-400 shrink-0" />,
     },
   ];

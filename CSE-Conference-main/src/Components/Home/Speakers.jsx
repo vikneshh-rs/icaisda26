@@ -186,7 +186,7 @@ const Speakers = () => {
                   {
                     label: "Full Paper Submission Deadline",
                     oldDate: "31st August, 2026",
-                    newDate: "21st September, 2026",
+                    newDate: "28th September, 2026",
                   },
                   {
                     label: "Acceptance Intimation",

@@ -15,7 +15,7 @@ const AnnouncementSlider = () => {
       badge: "OFFICIAL",
       title: "Proceedings Author Guidelines Published",
       desc: "Check the comprehensive proceedings author instructions & formatting slides.",
-      link: "https://docs.google.com/presentation/d/11jGtYTXokSTyP0UPXTRaVJ3o_fvYBbN7/edit?usp=sharing&ouid=114098769929117624762&rtpof=true&sd=true",
+      link: "https://drive.google.com/file/d/11jGtYTXokSTyP0UPXTRaVJ3o_fvYBbN7/view?usp=sharing",
       linkText: "View Author Guidelines",
       icon: <BookOpen className="w-4 h-4 text-emerald-400 shrink-0" />,
     },

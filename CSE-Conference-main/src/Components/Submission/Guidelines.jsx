@@ -71,7 +71,7 @@ const Guidelines = () => {
 
           {/* Proceedings Author Guidelines Button */}
           <a
-            href="https://docs.google.com/presentation/d/11jGtYTXokSTyP0UPXTRaVJ3o_fvYBbN7/edit?usp=drive_link&ouid=114098769929117624762&rtpof=true&sd=true"
+            href="https://docs.google.com/presentation/d/11jGtYTXokSTyP0UPXTRaVJ3o_fvYBbN7/edit?usp=sharing&ouid=114098769929117624762&rtpof=true&sd=true"
             target="_blank"
             rel="noopener noreferrer"
             className="text-sm md:text-base bg-gradient-to-tr from-emerald-600 via-emerald-500 to-teal-600 hover:bg-emerald-700 text-white px-5 py-3 rounded-full font-bold transition shadow-lg hover:shadow-xl hover:scale-105 flex items-center gap-2"
@@ -148,7 +148,7 @@ const Guidelines = () => {
                 </p>
               </div>
               <a
-                href="https://docs.google.com/presentation/d/11jGtYTXokSTyP0UPXTRaVJ3o_fvYBbN7/edit?usp=drive_link&ouid=114098769929117624762&rtpof=true&sd=true"
+                href="https://docs.google.com/presentation/d/11jGtYTXokSTyP0UPXTRaVJ3o_fvYBbN7/edit?usp=sharing&ouid=114098769929117624762&rtpof=true&sd=true"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 w-full py-3 bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-sm rounded-xl transition shadow hover:shadow-md"

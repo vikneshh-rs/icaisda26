@@ -105,12 +105,12 @@ const Registration = () => {
             <span>🎉 Registration is Now Open</span>
             <span>📅 Last Date for Registration: 28-09-2026</span>
             <span>🔒 Registration Closing: 10-10-2026</span>
-            <span>⚠️ Late Submission Processing Charge: Rs. 1,000</span>
+            <span>⚠️ Late Submission Processing Charge: Rs. 1,000 (after 10th October)</span>
             {/* Duplicate for seamless loop */}
             <span>🎉 Registration is Now Open</span>
             <span>📅 Last Date for Registration: 28-09-2026</span>
             <span>🔒 Registration Closing: 10-10-2026</span>
-            <span>⚠️ Late Submission Processing Charge: Rs. 1,000</span>
+            <span>⚠️ Late Submission Processing Charge: Rs. 1,000 (after 10th October)</span>
           </div>
           <style>
             {`
@@ -151,7 +151,7 @@ const Registration = () => {
 
           <div className="w-full lg:w-auto bg-amber-500/20 border border-amber-400/50 p-4 rounded-2xl text-amber-200 text-sm font-semibold flex items-center justify-center gap-3">
             <AlertCircle className="w-5 h-5 text-amber-300 shrink-0" />
-            <span>Processing charge of <strong className="text-amber-300 font-bold">Rs. 1,000</strong> will be charged for Late Submission.</span>
+            <span>Processing charge of <strong className="text-amber-300 font-bold">Rs. 1,000</strong> will be charged for late submissions after 10th October.</span>
           </div>
         </div>
 
@@ -218,7 +218,7 @@ const Registration = () => {
               <div className="flex gap-3 bg-amber-100/60 p-3.5 rounded-xl border border-amber-300">
                 <AlertCircle className="w-6 h-6 text-amber-700 shrink-0 mt-0.5" />
                 <p className="text-amber-950 font-medium">
-                  <strong>Key Registration Deadlines:</strong> The last date for registration is <strong>28th September 2026</strong>. Final registration closes on <strong>10th October 2026</strong>. A processing charge of <strong>Rs. 1,000</strong> will be charged for Late Submission.
+                  <strong>Key Registration Deadlines:</strong> The last date for registration is <strong>28th September 2026</strong>. Final registration closes on <strong>10th October 2026</strong>. A processing charge of <strong>Rs. 1,000</strong> will be charged for late submissions after 10th October.
                 </p>
               </div>
             </div>
@@ -344,7 +344,7 @@ const Registration = () => {
             </p>
             <p className="flex items-center gap-2 text-amber-800 font-semibold bg-amber-50 p-2.5 rounded-xl border border-amber-200">
               <span className="w-2 h-2 rounded-full bg-amber-500 shrink-0"></span>
-              A processing charge of Rs. 1,000 will be charged for Late Submission.
+              A processing charge of Rs. 1,000 will be charged for late submissions after 10th October.
             </p>
           </div>
         </div>

@@ -41,7 +41,7 @@ const Guidelines = () => {
         </p>
         <p className="text-blue-800 text-center text-sm md:text-base font-medium mb-6">
           Last Date for Registration: <b>28th September 2026</b> &nbsp;|&nbsp; Registration Closing: <b>10th October 2026</b>
-          <span className="block text-xs md:text-sm text-amber-900 mt-1 font-semibold">⚠️ Processing charge of Rs. 1,000 will be charged for Late Submission.</span>
+          <span className="block text-xs md:text-sm text-amber-900 mt-1 font-semibold">⚠️ Processing charge of Rs. 1,000 will be charged for late submissions after 10th October.</span>
         </p>
 
         {/* Action Buttons Grid */}

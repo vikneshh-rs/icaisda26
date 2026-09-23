@@ -251,7 +251,7 @@ export default function ListenerRegistration() {
               </div>
             </div>
             <div className="bg-amber-400/20 border border-yellow-300/40 px-4 py-2 rounded-xl text-yellow-200 text-xs md:text-sm font-semibold text-center">
-              ⚠️ Processing charge of <strong className="text-yellow-300">Rs. 1,000</strong> will be charged for Late Submission.
+              ⚠️ Processing charge of <strong className="text-yellow-300">Rs. 1,000</strong> will be charged for late submissions after 10th October.
             </div>
           </div>
         </div>

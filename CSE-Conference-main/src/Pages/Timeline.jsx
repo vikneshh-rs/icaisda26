@@ -82,7 +82,7 @@ const Timeline = () => {
         {/* Late Submission Notice */}
         <div className="w-full bg-amber-500/20 border border-amber-400/60 rounded-xl p-4 text-amber-200 text-sm md:text-base font-semibold flex items-center justify-center gap-2">
           <span className="text-xl">⚠️</span>
-          <span>Processing charge of <strong className="text-amber-300 font-bold">Rs.1,000</strong> will be charged for Late Submission.</span>
+          <span>Processing charge of <strong className="text-amber-300 font-bold">Rs. 1,000</strong> will be charged for late submissions after 10th October.</span>
         </div>
       </div>
     </div>

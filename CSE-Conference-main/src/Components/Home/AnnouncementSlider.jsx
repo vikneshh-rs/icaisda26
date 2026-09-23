@@ -22,7 +22,7 @@ const AnnouncementSlider = () => {
     {
       badge: "DEADLINE",
       title: "Registration Timeline",
-      desc: "Last date for registration is 28-09-2026. Portal closes on 10-10-2026.",
+      desc: "Last date: 28-09-2026 | Closing: 10-10-2026 (Rs. 1,000 late fee after 10th October).",
       link: "#/registration",
       linkText: "Register Now",
       icon: <Sparkles className="w-4 h-4 text-amber-400 shrink-0" />,

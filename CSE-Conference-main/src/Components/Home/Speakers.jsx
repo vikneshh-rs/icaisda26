@@ -199,7 +199,7 @@ const Speakers = () => {
         {/* Late Submission Notice */}
         <div className="w-full bg-amber-400/20 border border-yellow-300/60 rounded-xl p-3 md:p-4 text-yellow-200 text-sm md:text-base font-semibold flex items-center justify-center gap-2">
           <span className="text-xl">⚠️</span>
-          <span>Processing charge of <strong className="text-yellow-300 font-bold">Rs.1,000</strong> will be charged for Late Submission.</span>
+          <span>Processing charge of <strong className="text-yellow-300 font-bold">Rs. 1,000</strong> will be charged for late submissions after 10th October.</span>
         </div>
       </div>
     </div>

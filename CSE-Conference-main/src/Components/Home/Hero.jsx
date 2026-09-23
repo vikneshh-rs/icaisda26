@@ -85,7 +85,7 @@ const Hero = () => {
       <img
         src={heroSub}
         alt="Background"
-        className="h-full blur-[3px] -z-20 inset-0 absolute w-screen object-cover opacity-10 block md:hidden pointer-events-none"
+        className="h-full blur-[3px] -z-20 inset-0 absolute w-full object-cover opacity-10 block md:hidden pointer-events-none"
       />
     </div>
   );

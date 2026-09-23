@@ -49,160 +49,193 @@ const Speakers = () => {
   ];
 
   return (
-    <div className="flex mx-auto max-w-fit flex-col items-center justify-center my-20 text-white">
-      <h2 className="font-semibold text-4xl text-center border-b-[3px] pb-1 border-blue-500 max-w-fit text-blue-400">
-        Keynote Speakers
-      </h2>
-      <div className="mt-6 md:mt-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-10">
-        {speakers.map((ele, ind) => (
-          <div className="flex flex-col items-center" key={ind}>
-            <div className="min-w-40 min-h-40 md:min-w-48 md:min-h-48 max-w-48 max-h-48 relative rounded-full flex justify-center items-center group cursor-pointer">
-              <div className="absolute bg-blue-500 w-full h-full rounded-full -z-10 -translate-x-2 -translate-y-2 shadow-lg"></div>
-              <img
-                src={ele.image}
-                alt={`Portrait of ${ele.name}`}
-                className="absolute w-40 h-40 md:w-48 md:h-48 rounded-full border-4 border-blue-400 object-cover"
-              />
-            </div>
-            <div className="text-center mt-4 max-w-xs">
-              <p className="font-bold text-blue-400 text-xl">{ele.name}</p>
-              <p className="text-blue-500 text-sm">{ele.designation}</p>
-              <p className="text-blue-500 text-sm">{ele.university}</p>
-              <p className="text-yellow-300 text-xs mt-3 italic">{ele.keynote}</p>
-            </div>
-          </div>
-        ))}
-      </div>
-
-      {/* ICAISDA-2025 Proceedings */}
-      <div className="mt-20 max-w-3xl w-full mx-4 text-left bg-gray-900 p-6 rounded-lg">
-        <h2 className="text-2xl md:text-3xl font-bold text-yellow-300 mb-4">
-          ICAISDA-2025 Proceedings
-        </h2>
-        <ul className="text-white list-disc list-inside space-y-2 md:text-lg">
-          <li>
-            The conference proceedings are available at:{" "}
-            <a
-              href="https://atlantis-press.com/proceedings/icaisda-25"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-yellow-300 underline hover:text-yellow-200"
-            >
-              https://atlantis-press.com/proceedings/icaisda-25
-            </a>{" "}
-            (Springer Nature)
-          </li>
-          <li>
-            The extended versions of 34 papers presented at the conference have
-            been published in Gongcheng Kexue Yu Jishu / Advanced Engineering
-            Journal (Scopus-indexed).
-          </li>
-        </ul>
-      </div>
-
-      {/* NIRF Banner */}
-      <div className="mt-10 max-w-3xl w-full mx-4">
-        <img
-          src={nirfBanner}
-          alt="NIRF Banner"
-          className="w-full rounded-xl shadow-lg"
-        />
-      </div>
-
-      {/* Query Email */}
-      <p className="mt-6 text-red-500 font-semibold text-lg md:text-xl">
-        Any queries please mail to:{" "}
-        <a
-          href="mailto:icaisda@ptuniv.edu.in"
-          className="underline hover:text-red-400"
-        >
-          icaisda@ptuniv.edu.in
-        </a>
-      </p>
-
-      {/* Key Highlights Section */}
-      <div className="relative z-10 flex flex-col items-center gap-6 border mt-20 border-blue-400 bg-gradient-to-r from-blue-900 via-blue-700 to-blue-500 p-4 md:p-8 rounded-xl shadow-2xl max-w-3xl w-full mx-4 text-center">
-        <h1 className="text-3xl md:text-4xl font-bold text-yellow-300 drop-shadow-lg">
-          Key Highlights
-        </h1>
-        <ul className="text-white text-left list-disc list-inside space-y-3 md:text-lg px-2 md:px-4">
-          <li>
-            Technical Tracks on Artificial Intelligence, Secure Computing,
-            Communication, Secure Data Analytics and Internet of Things
-          </li>
-          <li>Distinguished keynote speakers and Insightful Plenary sessions</li>
-          <li>
-            All the accepted papers will be published in conference proceedings
-            with ISBN
-          </li>
-          <li>
-            Choice for paper publications in a Reputed Journals with indexing
-          </li>
-          <li>
-            Opportunities to connect with National and International Experts
-          </li>
-          <li>Best Paper Awards</li>
-        </ul>
-      </div>
-
-      {/* Important Dates Section */}
-      <div className="relative z-10 flex flex-col items-center gap-6 border mt-10 border-blue-400 bg-gradient-to-r from-blue-900 via-blue-700 to-blue-500 p-4 md:p-8 rounded-xl shadow-2xl max-w-3xl w-full mx-4 text-center">
-        <h1 className="text-3xl md:text-4xl font-bold text-yellow-300 drop-shadow-lg">
-          Important Dates
-        </h1>
-        <table className="md:text-lg border-separate border-spacing-3 text-white w-full">
-          <tbody>
-            {[
-              {
-                label: "Full Paper Submission Deadline",
-                oldDate: "31st August, 2026",
-                newDate: "21st September, 2026",
-              },
-              {
-                label: "Acceptance Intimation",
-                oldDate: "27th September, 2026",
-                newDate: "4th October, 2026",
-              },
-              {
-                label: "Last Date for Registration",
-                newDate: "28th September, 2026",
-              },
-              {
-                label: "Registration Closing Date",
-                newDate: "10th October, 2026",
-              },
-              {
-                label: "Conference Date",
-                newDate: "12 - 13, November, 2026",
-              },
-            ].map((row, index) => (
-              <tr
-                key={index}
-                className="bg-blue-600/80 border border-blue-300 rounded-lg transition duration-500 hover:bg-blue-700 hover:text-yellow-300"
-              >
-                <th className="font-medium px-4 py-3 text-left border border-blue-300 rounded-lg drop-shadow-lg w-1/2">
-                  {row.label}
-                </th>
-                <th className="font-medium px-4 py-3 text-left border border-blue-300 rounded-lg drop-shadow-lg w-1/2">
-                  {row.oldDate && (
-                    <span className="line-through text-blue-300/60 mr-3">
-                      {row.oldDate}
-                    </span>
-                  )}
-                  <span>{row.newDate}</span>
-                </th>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-
-        {/* Late Submission Notice */}
-        <div className="w-full bg-amber-400/20 border border-yellow-300/60 rounded-xl p-3 md:p-4 text-yellow-200 text-sm md:text-base font-semibold flex items-center justify-center gap-2">
-          <span className="text-xl">⚠️</span>
-          <span>Processing charge of <strong className="text-yellow-300 font-bold">Rs. 1,000</strong> will be charged for late submissions after 10th October.</span>
+    <section className="w-full py-16 md:py-24 bg-gradient-to-b from-slate-900 via-blue-950 to-slate-900 text-white relative z-10">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center">
+        
+        {/* Section Title */}
+        <div className="text-center mb-12">
+          <span className="text-xs font-bold uppercase tracking-wider text-blue-400 bg-blue-900/60 px-3 py-1 rounded-full border border-blue-500/30">
+            Distinguished Guests
+          </span>
+          <h2 className="text-3xl md:text-4xl font-extrabold text-white mt-2">
+            Keynote Speakers
+          </h2>
+          <div className="w-20 h-1 bg-blue-500 rounded-full mt-3 mx-auto"></div>
         </div>
+
+        {/* Speakers Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10 w-full max-w-5xl justify-items-center">
+          {speakers.map((ele, ind) => (
+            <div className="flex flex-col items-center bg-white/5 border border-white/10 rounded-2xl p-6 backdrop-blur-sm shadow-xl w-full max-w-sm hover:border-blue-400/50 hover:bg-white/10 transition-all duration-300" key={ind}>
+              <div className="w-36 h-36 md:w-44 md:h-44 relative rounded-full flex justify-center items-center group cursor-pointer my-2">
+                <div className="absolute bg-blue-500 w-full h-full rounded-full -z-10 -translate-x-1.5 -translate-y-1.5 shadow-lg opacity-80 group-hover:scale-105 transition-transform"></div>
+                <img
+                  src={ele.image}
+                  alt={`Portrait of ${ele.name}`}
+                  className="w-36 h-36 md:w-44 md:h-44 rounded-full border-4 border-blue-400 object-cover shadow-md"
+                />
+              </div>
+              <div className="text-center mt-4 w-full">
+                <p className="font-bold text-blue-300 text-lg md:text-xl">{ele.name}</p>
+                <p className="text-slate-300 text-xs md:text-sm mt-1">{ele.designation}</p>
+                <p className="text-slate-400 text-xs mt-1 leading-snug">{ele.university}</p>
+                <div className="mt-3 pt-3 border-t border-white/10">
+                  <p className="text-yellow-300 text-xs italic font-medium">"{ele.keynote}"</p>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* ICAISDA-2025 Proceedings */}
+        <div className="mt-16 max-w-4xl w-full bg-white/5 border border-white/10 p-6 md:p-8 rounded-2xl backdrop-blur-sm shadow-xl">
+          <h2 className="text-2xl md:text-3xl font-bold text-yellow-300 mb-4 flex items-center gap-2">
+            <span>📚</span>
+            <span>ICAISDA-2025 Proceedings</span>
+          </h2>
+          <ul className="text-slate-200 list-disc list-inside space-y-2.5 text-sm md:text-base leading-relaxed">
+            <li>
+              The conference proceedings are available at:{" "}
+              <a
+                href="https://atlantis-press.com/proceedings/icaisda-25"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-yellow-300 underline font-semibold hover:text-yellow-200 break-all"
+              >
+                https://atlantis-press.com/proceedings/icaisda-25
+              </a>{" "}
+              (Springer Nature)
+            </li>
+            <li>
+              The extended versions of 34 papers presented at the conference have
+              been published in Gongcheng Kexue Yu Jishu / Advanced Engineering
+              Journal (Scopus-indexed).
+            </li>
+          </ul>
+        </div>
+
+        {/* NIRF Banner */}
+        <div className="mt-8 max-w-4xl w-full">
+          <img
+            src={nirfBanner}
+            alt="NIRF Banner"
+            className="w-full rounded-2xl shadow-xl border border-white/10 object-contain bg-white"
+          />
+        </div>
+
+        {/* Query Email */}
+        <div className="mt-8 bg-blue-900/40 border border-blue-500/30 rounded-full px-6 py-2.5 text-center shadow-md">
+          <p className="text-slate-200 text-sm md:text-base font-medium">
+            Any queries please mail to:{" "}
+            <a
+              href="mailto:icaisda@ptuniv.edu.in"
+              className="text-yellow-300 font-bold underline hover:text-yellow-200 ml-1"
+            >
+              icaisda@ptuniv.edu.in
+            </a>
+          </p>
+        </div>
+
+        {/* Key Highlights Section */}
+        <div className="relative z-10 flex flex-col items-center gap-6 border mt-12 border-blue-400/40 bg-gradient-to-r from-blue-900/90 via-blue-800/90 to-indigo-900/90 backdrop-blur-sm p-6 md:p-8 rounded-2xl shadow-2xl max-w-4xl w-full text-center">
+          <div className="text-center">
+            <span className="text-xs font-bold uppercase tracking-wider text-yellow-300 bg-yellow-400/10 px-3 py-1 rounded-full border border-yellow-300/30">
+              Conference Features
+            </span>
+            <h1 className="text-2xl md:text-3xl font-extrabold text-white mt-2 drop-shadow-md">
+              Key Highlights
+            </h1>
+            <div className="w-16 h-1 bg-yellow-400 rounded-full mt-2 mx-auto"></div>
+          </div>
+          <ul className="text-slate-100 text-left list-disc list-inside space-y-3 text-sm md:text-base leading-relaxed w-full px-2 md:px-4">
+            <li>
+              Technical Tracks on Artificial Intelligence, Secure Computing,
+              Communication, Secure Data Analytics and Internet of Things
+            </li>
+            <li>Distinguished keynote speakers and Insightful Plenary sessions</li>
+            <li>
+              All the accepted papers will be published in conference proceedings
+              with ISBN
+            </li>
+            <li>
+              Choice for paper publications in a Reputed Journals with indexing
+            </li>
+            <li>
+              Opportunities to connect with National and International Experts
+            </li>
+            <li>Best Paper Awards</li>
+          </ul>
+        </div>
+
+        {/* Important Dates Section */}
+        <div className="relative z-10 flex flex-col items-center gap-6 border mt-10 border-blue-400/40 bg-gradient-to-r from-blue-900/90 via-blue-800/90 to-indigo-900/90 backdrop-blur-sm p-6 md:p-8 rounded-2xl shadow-2xl max-w-4xl w-full text-center">
+          <div className="text-center">
+            <span className="text-xs font-bold uppercase tracking-wider text-yellow-300 bg-yellow-400/10 px-3 py-1 rounded-full border border-yellow-300/30">
+              Schedule &amp; Deadlines
+            </span>
+            <h1 className="text-2xl md:text-3xl font-extrabold text-white mt-2 drop-shadow-md">
+              Important Dates
+            </h1>
+            <div className="w-16 h-1 bg-yellow-400 rounded-full mt-2 mx-auto"></div>
+          </div>
+
+          <div className="w-full overflow-x-auto">
+            <table className="text-sm md:text-base border-separate border-spacing-2.5 text-white w-full min-w-[500px]">
+              <tbody>
+                {[
+                  {
+                    label: "Full Paper Submission Deadline",
+                    oldDate: "31st August, 2026",
+                    newDate: "21st September, 2026",
+                  },
+                  {
+                    label: "Acceptance Intimation",
+                    oldDate: "27th September, 2026",
+                    newDate: "4th October, 2026",
+                  },
+                  {
+                    label: "Last Date for Registration",
+                    newDate: "28th September, 2026",
+                  },
+                  {
+                    label: "Registration Closing Date",
+                    newDate: "10th October, 2026",
+                  },
+                  {
+                    label: "Conference Date",
+                    newDate: "12 - 13, November, 2026",
+                  },
+                ].map((row, index) => (
+                  <tr
+                    key={index}
+                    className="bg-blue-800/50 hover:bg-blue-700/60 transition duration-300 rounded-xl"
+                  >
+                    <td className="font-semibold px-4 py-3 text-left border border-blue-400/30 rounded-xl w-1/2">
+                      {row.label}
+                    </td>
+                    <td className="font-medium px-4 py-3 text-left border border-blue-400/30 rounded-xl w-1/2">
+                      {row.oldDate && (
+                        <span className="line-through text-blue-300/60 mr-3 text-xs md:text-sm">
+                          {row.oldDate}
+                        </span>
+                      )}
+                      <span className="text-yellow-300 font-bold">{row.newDate}</span>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+
+          {/* Late Submission Notice */}
+          <div className="w-full bg-amber-400/20 border border-yellow-300/60 rounded-xl p-3.5 md:p-4 text-yellow-200 text-sm md:text-base font-semibold flex items-center justify-center gap-2 shadow-inner">
+            <span className="text-xl shrink-0">⚠️</span>
+            <span>Processing charge of <strong className="text-yellow-300 font-bold">Rs. 1,000</strong> will be charged for late submissions after 10th October.</span>
+          </div>
+        </div>
+
       </div>
-    </div>
+    </section>
   );
 };
 

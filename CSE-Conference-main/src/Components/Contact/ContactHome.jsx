@@ -27,7 +27,7 @@ const ProfessorCard = (props) => {
 const ContactHome = () => {
   return (
     <div 
-      className="w-screen min-h-screen flex justify-center items-center bg-cover bg-center" 
+      className="w-full min-h-screen flex justify-center items-center bg-cover bg-center pt-24 pb-16 px-4 sm:px-6 lg:px-8" 
       style={{ backgroundImage: `url(${backgroundImage})` }} // Set background image
     >
       <div className="flex flex-col gap-8 items-center relative z-10">

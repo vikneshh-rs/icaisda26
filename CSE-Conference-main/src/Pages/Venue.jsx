@@ -22,15 +22,11 @@ const VenueDetails = () => {
   }, []);
 
   return (
-    <div className="w-screen min-h-screen flex flex-col items-center justify-center bg-gradient-to-r from-[#0F172A] via-[#1E3A8A] to-[#2563EB]">
-
-
-
-
+    <div className="w-full min-h-screen flex flex-col items-center justify-center bg-gradient-to-r from-[#0F172A] via-[#1E3A8A] to-[#2563EB] pt-24 pb-16 px-4 sm:px-6 lg:px-8">
 
       {/* VENUE DETAILS */}
       <div
-        className="w-full mt-40 max-w-5xl bg-white/10 backdrop-blur-md shadow-2xl border border-blue-400 rounded-2xl p-12 text-center relative"
+        className="w-full mt-6 max-w-5xl bg-white/10 backdrop-blur-md shadow-2xl border border-blue-400 rounded-2xl p-6 md:p-12 text-center relative"
         style={{
           backgroundImage: `url(${cs7})`,
           backgroundSize: "cover",

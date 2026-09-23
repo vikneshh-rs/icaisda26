@@ -3,8 +3,8 @@ import cseImg from "../../assets/Images/cs10.jpg";
 
 const Accommodation = () => {
   return (
-    <div className="w-screen flex justify-center items-center mt-10 mb-5 pb-5 border-gray-300">
-      <div className="w-[75%] text-justify items-center text-lg flex flex-row-reverse gap-6 tracking-wide leading-relaxed">
+    <div className="w-full flex justify-center items-center mt-10 mb-5 pb-5 border-gray-300">
+      <div className="w-full max-w-6xl px-4 sm:px-6 lg:px-8 text-justify items-center text-lg flex flex-col md:flex-row-reverse gap-6 tracking-wide leading-relaxed">
         <div className="w-[40%]">
           <img src={cseImg} className="h-96 object-cover" alt="" />
         </div>

@@ -29,13 +29,13 @@ const Advisory = () => {
   };
 
   return (
-    <div className="min-h-screen w-screen relative overflow-hidden">
+    <div className="min-h-screen w-full relative overflow-hidden pt-20 pb-12">
       <div
         className="absolute inset-0 bg-cover bg-center"
         style={{ backgroundImage: `url(${backgroundImage1})` }}
       ></div>
 
-      <div className="relative container mx-auto px-4 py-12">
+      <div className="relative container mx-auto px-4 py-8">
         {/* Header */}
         <div className="text-center mb-12">
           <h1 className="text-5xl font-bold text-white mb-4">

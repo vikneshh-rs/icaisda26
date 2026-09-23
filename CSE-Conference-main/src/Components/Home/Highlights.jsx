@@ -3,7 +3,7 @@ import { Highlights_Details } from "../../Data/KeyHighlights";
 
 const Highlights = () => {
   return (
-    <div className="w-screen h-screen flex justify-center items-center">
+    <div className="w-full min-h-[50vh] flex justify-center items-center py-12 px-4">
       <div className="flex flex-col items-center gap-5 bg-slate-500 px-10 py-5 rounded-xl">
         <h1 className="text-2xl font-bold">Key Highlights</h1>
         <div>

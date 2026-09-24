@@ -652,7 +652,7 @@ export default function PaperRegistration() {
 
             <div className="p-3 bg-amber-50 border border-amber-200 rounded-xl text-xs md:text-sm text-amber-800 font-medium flex items-center gap-2">
               <AlertCircle className="w-4 h-4 text-amber-600 shrink-0" />
-              <span><strong>Note:</strong> Last date for registration is <strong>28-09-2026</strong> (Registration Closing: <strong>10-10-2026</strong>). A processing charge of <strong>Rs. 1,000</strong> will be charged for late submissions after 10th October.</span>
+              <span><strong>Note:</strong> Last date for registration is <strong>10-10-2026</strong>. A processing charge of <strong>Rs. 1,000</strong> will be charged for late submissions after 10th October.</span>
             </div>
 
             {/* Payment Fields */}

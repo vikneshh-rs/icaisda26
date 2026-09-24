@@ -196,7 +196,8 @@ const Speakers = () => {
                   },
                   {
                     label: "Last Date for Registration",
-                    newDate: "28th September, 2026",
+                    oldDate: "28th September, 2026",
+                    newDate: "10th October, 2026",
                   },
                   {
                     label: "Registration Closing Date",
@@ -243,7 +244,8 @@ const Speakers = () => {
               },
               {
                 label: "Last Date for Registration",
-                newDate: "28th September, 2026",
+                oldDate: "28th September, 2026",
+                newDate: "10th October, 2026",
               },
               {
                 label: "Registration Closing Date",

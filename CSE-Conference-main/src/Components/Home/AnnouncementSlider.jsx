@@ -21,8 +21,8 @@ const AnnouncementSlider = () => {
     },
     {
       badge: "DEADLINE",
-      title: "Paper Submission & Registration",
-      desc: "Full paper submission & registration deadline: 28-09-2026 | Closing: 10-10-2026.",
+      title: "Submission & Registration Deadlines",
+      desc: "Paper submission: 28-09-2026 | Registration deadline: 10-10-2026.",
       link: "#/papersubmission",
       linkText: "Submit / Register",
       icon: <Sparkles className="w-4 h-4 text-amber-400 shrink-0" />,

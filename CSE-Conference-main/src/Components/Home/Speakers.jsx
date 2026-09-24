@@ -179,8 +179,9 @@ const Speakers = () => {
             <div className="w-16 h-1 bg-yellow-400 rounded-full mt-2 mx-auto"></div>
           </div>
 
-          <div className="w-full overflow-x-auto">
-            <table className="text-sm md:text-base border-separate border-spacing-2.5 text-white w-full min-w-[500px]">
+          {/* Desktop Table View */}
+          <div className="hidden sm:block w-full">
+            <table className="text-sm md:text-base border-separate border-spacing-2.5 text-white w-full">
               <tbody>
                 {[
                   {
@@ -227,8 +228,51 @@ const Speakers = () => {
             </table>
           </div>
 
+          {/* Mobile Card List View - 100% visible on small screens */}
+          <div className="block sm:hidden w-full space-y-2.5 text-left">
+            {[
+              {
+                label: "Full Paper Submission Deadline",
+                oldDate: "31st August, 2026",
+                newDate: "28th September, 2026",
+              },
+              {
+                label: "Acceptance Intimation",
+                oldDate: "27th September, 2026",
+                newDate: "4th October, 2026",
+              },
+              {
+                label: "Last Date for Registration",
+                newDate: "28th September, 2026",
+              },
+              {
+                label: "Registration Closing Date",
+                newDate: "10th October, 2026",
+              },
+              {
+                label: "Conference Date",
+                newDate: "12 - 13, November, 2026",
+              },
+            ].map((row, index) => (
+              <div
+                key={index}
+                className="bg-blue-800/60 border border-blue-400/40 rounded-xl p-3.5 flex flex-col gap-1 shadow"
+              >
+                <span className="text-xs font-semibold text-slate-200">{row.label}</span>
+                <div className="flex items-center gap-2">
+                  {row.oldDate && (
+                    <span className="line-through text-blue-300/60 text-xs">
+                      {row.oldDate}
+                    </span>
+                  )}
+                  <span className="text-yellow-300 font-bold text-sm sm:text-base">{row.newDate}</span>
+                </div>
+              </div>
+            ))}
+          </div>
+
           {/* Late Submission Notice */}
-          <div className="w-full bg-amber-400/20 border border-yellow-300/60 rounded-xl p-3.5 md:p-4 text-yellow-200 text-sm md:text-base font-semibold flex items-center justify-center gap-2 shadow-inner">
+          <div className="w-full bg-amber-400/20 border border-yellow-300/60 rounded-xl p-3.5 md:p-4 text-yellow-200 text-xs md:text-base font-semibold flex items-center justify-center gap-2 shadow-inner text-center">
             <span className="text-xl shrink-0">⚠️</span>
             <span>Processing charge of <strong className="text-yellow-300 font-bold">Rs. 1,000</strong> will be charged for late submissions after 10th October.</span>
           </div>

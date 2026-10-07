@@ -196,12 +196,12 @@ const Speakers = () => {
                   },
                   {
                     label: "Last Date for Registration",
-                    oldDate: "28th September, 2026",
-                    newDate: "10th October, 2026",
+                    oldDate: "10th October, 2026",
+                    newDate: "15th October, 2026",
                   },
                   {
                     label: "Registration Closing Date",
-                    newDate: "10th October, 2026",
+                    newDate: "15th October, 2026",
                   },
                   {
                     label: "Conference Date",
@@ -244,12 +244,12 @@ const Speakers = () => {
               },
               {
                 label: "Last Date for Registration",
-                oldDate: "28th September, 2026",
-                newDate: "10th October, 2026",
+                oldDate: "10th October, 2026",
+                newDate: "15th October, 2026",
               },
               {
                 label: "Registration Closing Date",
-                newDate: "10th October, 2026",
+                newDate: "15th October, 2026",
               },
               {
                 label: "Conference Date",
@@ -276,7 +276,7 @@ const Speakers = () => {
           {/* Late Submission Notice */}
           <div className="w-full bg-amber-400/20 border border-yellow-300/60 rounded-xl p-3.5 md:p-4 text-yellow-200 text-xs md:text-base font-semibold flex items-center justify-center gap-2 shadow-inner text-center">
             <span className="text-xl shrink-0">⚠️</span>
-            <span>Processing charge of <strong className="text-yellow-300 font-bold">Rs. 1,000</strong> will be charged for late submissions after 10th October.</span>
+            <span>Processing charge of <strong className="text-yellow-300 font-bold">Rs. 1,000</strong> will be charged for late submissions after 15th October.</span>
           </div>
         </div>
 

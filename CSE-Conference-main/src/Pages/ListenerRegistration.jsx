@@ -246,12 +246,12 @@ export default function ListenerRegistration() {
               <div className="text-left">
                 <div className="text-xs uppercase tracking-wider text-emerald-200 font-bold">Registration Timeline</div>
                 <div className="text-sm font-semibold text-white">
-                  Last Date: <span className="text-emerald-300 font-bold">28-09-2026</span> &nbsp;|&nbsp; Closing: <span className="text-rose-300 font-bold">10-10-2026</span>
+                  Registration Extended: <span className="text-emerald-300 font-bold">15-10-2026</span> &nbsp;|&nbsp; Closing: <span className="text-rose-300 font-bold">15-10-2026</span>
                 </div>
               </div>
             </div>
             <div className="bg-amber-400/20 border border-yellow-300/40 px-4 py-2 rounded-xl text-yellow-200 text-xs md:text-sm font-semibold text-center">
-              ⚠️ Processing charge of <strong className="text-yellow-300">Rs. 1,000</strong> will be charged for late submissions after 10th October.
+              ⚠️ Processing charge of <strong className="text-yellow-300">Rs. 1,000</strong> will be charged for late submissions after 15th October.
             </div>
           </div>
         </div>

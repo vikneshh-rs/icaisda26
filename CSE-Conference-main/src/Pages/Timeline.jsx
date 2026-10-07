@@ -55,12 +55,12 @@ const Timeline = () => {
                 },
                 {
                   label: "Last Date for Registration",
-                  oldDate: "28th September, 2026",
-                  newDate: "10th October, 2026",
+                  oldDate: "10th October, 2026",
+                  newDate: "15th October, 2026",
                 },
                 {
                   label: "Registration Closing Date",
-                  newDate: "10th October, 2026",
+                  newDate: "15th October, 2026",
                 },
                 {
                   label: "Conference Date",
@@ -98,12 +98,12 @@ const Timeline = () => {
             },
             {
               label: "Last Date for Registration",
-              oldDate: "28th September, 2026",
-              newDate: "10th October, 2026",
+              oldDate: "10th October, 2026",
+              newDate: "15th October, 2026",
             },
             {
               label: "Registration Closing Date",
-              newDate: "10th October, 2026",
+              newDate: "15th October, 2026",
             },
             {
               label: "Conference Date",
@@ -130,7 +130,7 @@ const Timeline = () => {
         {/* Late Submission Notice */}
         <div className="w-full bg-amber-500/20 border border-amber-400/60 rounded-xl p-3.5 md:p-4 text-amber-200 text-xs sm:text-sm md:text-base font-semibold flex items-center justify-center gap-2 text-center">
           <span className="text-xl shrink-0">⚠️</span>
-          <span>Processing charge of <strong className="text-amber-300 font-bold">Rs. 1,000</strong> will be charged for late submissions after 10th October.</span>
+          <span>Processing charge of <strong className="text-amber-300 font-bold">Rs. 1,000</strong> will be charged for late submissions after 15th October.</span>
         </div>
       </div>
     </div>

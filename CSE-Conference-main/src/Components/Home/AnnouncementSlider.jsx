@@ -1,8 +1,24 @@
 import React from "react";
-import { FileText, ExternalLink, Sparkles, BookOpen } from "lucide-react";
+import { FileText, ExternalLink, Sparkles, BookOpen, BellRing } from "lucide-react";
 
 const AnnouncementSlider = () => {
   const announcements = [
+    {
+      badge: "NOTIFICATION",
+      title: "Paper Notification in Progress",
+      desc: "Paper acceptance notifications and intimations are currently in progress.",
+      link: "#/registration",
+      linkText: "Registration Details",
+      icon: <BellRing className="w-4 h-4 text-cyan-400 shrink-0" />,
+    },
+    {
+      badge: "EXTENDED",
+      title: "Registration Deadline Extended",
+      desc: "Registration is extended up to 15th October 2026. Submit your registration soon!",
+      link: "#/registration",
+      linkText: "Register Now",
+      icon: <Sparkles className="w-4 h-4 text-yellow-300 shrink-0" />,
+    },
     {
       badge: "NEW",
       title: "Word Template Published",
@@ -18,14 +34,6 @@ const AnnouncementSlider = () => {
       link: "https://drive.google.com/file/d/11jGtYTXokSTyP0UPXTRaVJ3o_fvYBbN7/view?usp=sharing",
       linkText: "View Author Guidelines",
       icon: <BookOpen className="w-4 h-4 text-emerald-400 shrink-0" />,
-    },
-    {
-      badge: "DEADLINE",
-      title: "Submission & Registration Deadlines",
-      desc: "Paper submission: 28-09-2026 | Registration deadline: 10-10-2026.",
-      link: "#/papersubmission",
-      linkText: "Submit / Register",
-      icon: <Sparkles className="w-4 h-4 text-amber-400 shrink-0" />,
     },
   ];
 

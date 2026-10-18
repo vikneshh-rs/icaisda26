@@ -4,13 +4,14 @@ import { FileText, ExternalLink, Sparkles, BookOpen, BellRing, AlertCircle } fro
 const AnnouncementSlider = () => {
   const announcements = [
     {
-      badge: "FEE & DEADLINE",
+      badge: "IMPORTANT",
       title: "Registration @ Rs.8000 till 20.10.2026",
       desc: "With additional late processing fee Rs.1000 till 25.10.2026 (Hard Deadline)",
       link: "#/registration",
       linkText: "Register Now",
-      icon: <Sparkles className="w-4 h-4 text-yellow-300 shrink-0 animate-pulse" />,
+      icon: <Sparkles className="w-4 h-4 text-yellow-300 shrink-0 animate-spin" />,
       highlight: true,
+      blink: true,
     },
     {
       badge: "NOTIFICATION",
@@ -20,6 +21,7 @@ const AnnouncementSlider = () => {
       linkText: "Registration Details",
       icon: <BellRing className="w-4 h-4 text-cyan-400 shrink-0" />,
       highlight: false,
+      blink: false,
     },
     {
       badge: "NEW",
@@ -29,6 +31,7 @@ const AnnouncementSlider = () => {
       linkText: "Download Word Template",
       icon: <FileText className="w-4 h-4 text-blue-400 shrink-0" />,
       highlight: false,
+      blink: false,
     },
     {
       badge: "OFFICIAL",
@@ -38,6 +41,7 @@ const AnnouncementSlider = () => {
       linkText: "View Author Guidelines",
       icon: <BookOpen className="w-4 h-4 text-emerald-400 shrink-0" />,
       highlight: false,
+      blink: false,
     },
   ];
 
@@ -59,24 +63,31 @@ const AnnouncementSlider = () => {
               <div
                 key={idx}
                 className={`inline-flex items-center gap-2.5 text-xs md:text-sm ${
-                  item.highlight ? "text-amber-100 font-semibold" : "text-slate-200"
+                  item.blink
+                    ? "animate-message-blink bg-rose-950/40 border border-rose-500/50 px-3 py-1 rounded-xl shadow-inner"
+                    : item.highlight
+                    ? "text-amber-100 font-semibold"
+                    : "text-slate-200"
                 }`}
               >
                 <span
-                  className={`inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[10px] md:text-xs font-black uppercase tracking-wider ${
-                    item.highlight
+                  className={`inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[10px] md:text-xs font-black uppercase tracking-wider ${
+                    item.blink
+                      ? "bg-rose-600 text-white border border-rose-400 animate-badge-blink shadow-md shadow-rose-600/50"
+                      : item.highlight
                       ? "bg-amber-400 text-slate-950 shadow-sm shadow-amber-500/50"
                       : "bg-white/10 border border-white/20 text-yellow-300"
                   }`}
                 >
+                  {item.blink && <span className="w-1.5 h-1.5 rounded-full bg-yellow-300 animate-ping shrink-0"></span>}
                   {item.badge}
                 </span>
                 {item.icon}
-                <span className={`font-bold ${item.highlight ? "text-yellow-200" : "text-white"}`}>
+                <span className={`font-bold ${item.blink ? "text-yellow-300 font-black tracking-wide" : item.highlight ? "text-yellow-200" : "text-white"}`}>
                   {item.title}
                 </span>
                 {item.desc && (
-                  <span className={`${item.highlight ? "text-amber-200 font-medium" : "text-slate-300"}`}>
+                  <span className={`${item.blink ? "text-rose-100 font-bold" : item.highlight ? "text-amber-200 font-medium" : "text-slate-300"}`}>
                     — {item.desc}
                   </span>
                 )}
@@ -84,10 +95,12 @@ const AnnouncementSlider = () => {
                   href={item.link}
                   target={item.link.startsWith("http") ? "_blank" : "_self"}
                   rel="noopener noreferrer"
-                  className={`inline-flex items-center gap-1 font-bold underline transition hover:scale-105 ml-1 ${
-                    item.highlight
-                      ? "text-yellow-300 hover:text-white"
-                      : "text-cyan-300 hover:text-white"
+                  className={`inline-flex items-center gap-1 font-bold transition hover:scale-105 ml-1 ${
+                    item.blink
+                      ? "text-yellow-300 hover:text-white bg-rose-600/60 hover:bg-rose-600 px-2.5 py-0.5 rounded-lg no-underline shadow-sm"
+                      : item.highlight
+                      ? "text-yellow-300 hover:text-white underline"
+                      : "text-cyan-300 hover:text-white underline"
                   }`}
                 >
                   <span>{item.linkText}</span>
@@ -110,10 +123,38 @@ const AnnouncementSlider = () => {
               transform: translateX(-33.33%);
             }
           }
+          @keyframes badgeBlink {
+            0%, 100% {
+              opacity: 1;
+              transform: scale(1);
+              box-shadow: 0 0 12px rgba(244, 63, 94, 0.8);
+            }
+            50% {
+              opacity: 0.45;
+              transform: scale(0.96);
+              box-shadow: 0 0 2px rgba(244, 63, 94, 0.2);
+            }
+          }
+          @keyframes messageBlink {
+            0%, 100% {
+              opacity: 1;
+              filter: drop-shadow(0 0 6px rgba(251, 191, 36, 0.6));
+            }
+            50% {
+              opacity: 0.65;
+              filter: drop-shadow(0 0 1px rgba(251, 191, 36, 0.1));
+            }
+          }
           .animate-announcement {
             display: inline-flex;
             width: max-content;
             animation: announcementSlide 28s linear infinite;
+          }
+          .animate-badge-blink {
+            animation: badgeBlink 1s ease-in-out infinite;
+          }
+          .animate-message-blink {
+            animation: messageBlink 1.2s ease-in-out infinite;
           }
         `}
       </style>

@@ -1,8 +1,17 @@
 import React from "react";
-import { FileText, ExternalLink, Sparkles, BookOpen, BellRing } from "lucide-react";
+import { FileText, ExternalLink, Sparkles, BookOpen, BellRing, AlertCircle } from "lucide-react";
 
 const AnnouncementSlider = () => {
   const announcements = [
+    {
+      badge: "FEE & DEADLINE",
+      title: "Registration @ Rs.8000 till 20.10.2026",
+      desc: "With additional late processing fee Rs.1000 till 25.10.2026 (Hard Deadline)",
+      link: "#/registration",
+      linkText: "Register Now",
+      icon: <Sparkles className="w-4 h-4 text-yellow-300 shrink-0 animate-pulse" />,
+      highlight: true,
+    },
     {
       badge: "NOTIFICATION",
       title: "Paper Notification in Progress",
@@ -10,14 +19,7 @@ const AnnouncementSlider = () => {
       link: "#/registration",
       linkText: "Registration Details",
       icon: <BellRing className="w-4 h-4 text-cyan-400 shrink-0" />,
-    },
-    {
-      badge: "EXTENDED",
-      title: "Registration Deadline Extended",
-      desc: "Registration is extended up to 20th October 2026. Submit your registration soon!",
-      link: "#/registration",
-      linkText: "Register Now",
-      icon: <Sparkles className="w-4 h-4 text-yellow-300 shrink-0" />,
+      highlight: false,
     },
     {
       badge: "NEW",
@@ -26,6 +28,7 @@ const AnnouncementSlider = () => {
       link: "https://drive.google.com/drive/folders/1F-UdCoJtnJ60xmlznowQ8h9-ft3H23PV?usp=sharing",
       linkText: "Download Word Template",
       icon: <FileText className="w-4 h-4 text-blue-400 shrink-0" />,
+      highlight: false,
     },
     {
       badge: "OFFICIAL",
@@ -34,6 +37,7 @@ const AnnouncementSlider = () => {
       link: "https://drive.google.com/file/d/11jGtYTXokSTyP0UPXTRaVJ3o_fvYBbN7/view?usp=sharing",
       linkText: "View Author Guidelines",
       icon: <BookOpen className="w-4 h-4 text-emerald-400 shrink-0" />,
+      highlight: false,
     },
   ];
 
@@ -50,28 +54,46 @@ const AnnouncementSlider = () => {
         {/* Sliding Ticker */}
         <div className="overflow-hidden relative w-full group">
           <div className="animate-announcement flex items-center gap-8 whitespace-nowrap group-hover:[animation-play-state:paused]">
-            {/* Render twice for seamless continuous loop */}
+            {/* Render 3 times for seamless continuous loop */}
             {[...announcements, ...announcements, ...announcements].map((item, idx) => (
               <div
                 key={idx}
-                className="inline-flex items-center gap-2.5 text-xs md:text-sm text-slate-200"
+                className={`inline-flex items-center gap-2.5 text-xs md:text-sm ${
+                  item.highlight ? "text-amber-100 font-semibold" : "text-slate-200"
+                }`}
               >
-                <span className="inline-flex items-center gap-1 bg-white/10 border border-white/20 px-2 py-0.5 rounded-full text-[10px] md:text-xs font-bold text-yellow-300">
+                <span
+                  className={`inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[10px] md:text-xs font-black uppercase tracking-wider ${
+                    item.highlight
+                      ? "bg-amber-400 text-slate-950 shadow-sm shadow-amber-500/50"
+                      : "bg-white/10 border border-white/20 text-yellow-300"
+                  }`}
+                >
                   {item.badge}
                 </span>
                 {item.icon}
-                <span className="font-bold text-white">{item.title}:</span>
-                <span className="text-slate-300 hidden md:inline">{item.desc}</span>
+                <span className={`font-bold ${item.highlight ? "text-yellow-200" : "text-white"}`}>
+                  {item.title}
+                </span>
+                {item.desc && (
+                  <span className={`${item.highlight ? "text-amber-200 font-medium" : "text-slate-300"}`}>
+                    — {item.desc}
+                  </span>
+                )}
                 <a
                   href={item.link}
                   target={item.link.startsWith("http") ? "_blank" : "_self"}
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1 text-cyan-300 hover:text-white underline font-semibold transition hover:scale-105"
+                  className={`inline-flex items-center gap-1 font-bold underline transition hover:scale-105 ml-1 ${
+                    item.highlight
+                      ? "text-yellow-300 hover:text-white"
+                      : "text-cyan-300 hover:text-white"
+                  }`}
                 >
                   <span>{item.linkText}</span>
                   <ExternalLink className="w-3 h-3" />
                 </a>
-                <span className="text-slate-600 mx-2">•</span>
+                <span className="text-slate-600 mx-3">•</span>
               </div>
             ))}
           </div>

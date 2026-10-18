@@ -276,7 +276,7 @@ const Speakers = () => {
           {/* Late Submission Notice */}
           <div className="w-full bg-amber-400/20 border border-yellow-300/60 rounded-xl p-3.5 md:p-4 text-yellow-200 text-xs md:text-base font-semibold flex items-center justify-center gap-2 shadow-inner text-center">
             <span className="text-xl shrink-0">⚠️</span>
-            <span>Registration closes on <strong className="text-yellow-300 font-bold">25th October 2026</strong>. Late submission processing charges of <strong className="text-yellow-300 font-bold">Rs. 1,000</strong> apply after 20th October.</span>
+            <span>Registration @ <strong className="text-yellow-300 font-bold">Rs.8000</strong> till <strong className="text-yellow-300 font-bold">20.10.2026</strong>. With additional late processing fee of <strong className="text-yellow-300 font-bold">Rs. 1,000</strong> till <strong className="text-yellow-300 font-bold">25.10.2026 (Hard Deadline)</strong>.</span>
           </div>
         </div>
 

@@ -103,16 +103,16 @@ const Registration = () => {
         <div className="w-full bg-emerald-50/80 border-y border-emerald-100 py-3 overflow-hidden rounded-xl shadow-inner relative">
           <div className="animate-marquee whitespace-nowrap text-sm md:text-base font-bold text-emerald-700 uppercase tracking-widest flex items-center gap-12">
             <span>📢 Paper Notification is in Progress</span>
-            <span>🎉 Registration Extended upto 20th October 2026</span>
+            <span>🎉 Registration @ Rs.8000 till 20.10.2026</span>
+            <span>⚠️ With additional late processing fee Rs.1000 till 25.10.2026 (Hard Deadline)</span>
             <span>📅 Last Date for Registration: 20-10-2026</span>
             <span>🔒 Registration Closing: 25-10-2026</span>
-            <span>⚠️ Late Submission Processing Charge: Rs. 1,000 (after 20th October)</span>
             {/* Duplicate for seamless loop */}
             <span>📢 Paper Notification is in Progress</span>
-            <span>🎉 Registration Extended upto 20th October 2026</span>
+            <span>🎉 Registration @ Rs.8000 till 20.10.2026</span>
+            <span>⚠️ With additional late processing fee Rs.1000 till 25.10.2026 (Hard Deadline)</span>
             <span>📅 Last Date for Registration: 20-10-2026</span>
             <span>🔒 Registration Closing: 25-10-2026</span>
-            <span>⚠️ Late Submission Processing Charge: Rs. 1,000 (after 20th October)</span>
           </div>
           <style>
             {`
@@ -203,7 +203,7 @@ const Registration = () => {
 
           <div className="w-full bg-amber-500/20 border border-amber-400/50 p-3.5 sm:p-4 rounded-2xl text-amber-200 text-xs sm:text-sm font-semibold flex items-center justify-center gap-2.5 text-center">
             <AlertCircle className="w-5 h-5 text-amber-300 shrink-0" />
-            <span>Registration closes on <strong className="text-amber-300 font-bold">25th October 2026</strong>. Processing charge of <strong className="text-amber-300 font-bold">Rs. 1,000</strong> will be charged for late submissions after 20th October.</span>
+            <span>Registration @ <strong className="text-amber-300 font-bold">Rs.8000</strong> till <strong className="text-amber-300 font-bold">20.10.2026</strong>. With additional late processing fee of <strong className="text-amber-300 font-bold">Rs. 1,000</strong> till <strong className="text-amber-300 font-bold">25.10.2026 (Hard Deadline)</strong>.</span>
           </div>
         </div>
 

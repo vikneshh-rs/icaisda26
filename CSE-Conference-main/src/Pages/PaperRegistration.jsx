@@ -323,12 +323,12 @@ export default function PaperRegistration() {
               <div className="text-left">
                 <div className="text-xs uppercase tracking-wider text-blue-200 font-bold">Important Registration Schedule</div>
                 <div className="text-sm font-semibold text-white">
-                  Registration Extended: <span className="text-emerald-300 font-bold">15-10-2026</span> &nbsp;|&nbsp; Closing: <span className="text-rose-300 font-bold">15-10-2026</span>
+                  Registration Extended: <span className="text-emerald-300 font-bold">20-10-2026</span> &nbsp;|&nbsp; Closing: <span className="text-rose-300 font-bold">25-10-2026</span>
                 </div>
               </div>
             </div>
             <div className="bg-amber-400/20 border border-yellow-300/40 px-4 py-2 rounded-xl text-yellow-200 text-xs md:text-sm font-semibold text-center">
-              ⚠️ Processing charge of <strong className="text-yellow-300">Rs. 1,000</strong> will be charged for late submissions after 15th October.
+              ⚠️ Registration closes on <strong className="text-yellow-300">25th October 2026</strong>. Late submission processing charges of <strong className="text-yellow-300">Rs. 1,000</strong> apply after 20th October.
             </div>
           </div>
         </div>
@@ -652,7 +652,7 @@ export default function PaperRegistration() {
 
             <div className="p-3 bg-amber-50 border border-amber-200 rounded-xl text-xs md:text-sm text-amber-800 font-medium flex items-center gap-2">
               <AlertCircle className="w-4 h-4 text-amber-600 shrink-0" />
-              <span><strong>Note:</strong> Last date for registration is <strong>15-10-2026</strong>. A processing charge of <strong>Rs. 1,000</strong> will be charged for late submissions after 15th October.</span>
+              <span><strong>Note:</strong> Last date for registration is <strong>20-10-2026</strong>. Registration closes on <strong>25th October 2026</strong>. Late submission processing charges of <strong>Rs. 1,000</strong> apply after 20th October.</span>
             </div>
 
             {/* Payment Fields */}

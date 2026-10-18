@@ -103,16 +103,16 @@ const Registration = () => {
         <div className="w-full bg-emerald-50/80 border-y border-emerald-100 py-3 overflow-hidden rounded-xl shadow-inner relative">
           <div className="animate-marquee whitespace-nowrap text-sm md:text-base font-bold text-emerald-700 uppercase tracking-widest flex items-center gap-12">
             <span>📢 Paper Notification is in Progress</span>
-            <span>🎉 Registration Extended upto 15th October 2026</span>
-            <span>📅 Last Date for Registration: 15-10-2026</span>
-            <span>🔒 Registration Closing: 15-10-2026</span>
-            <span>⚠️ Late Submission Processing Charge: Rs. 1,000 (after 15th October)</span>
+            <span>🎉 Registration Extended upto 20th October 2026</span>
+            <span>📅 Last Date for Registration: 20-10-2026</span>
+            <span>🔒 Registration Closing: 25-10-2026</span>
+            <span>⚠️ Late Submission Processing Charge: Rs. 1,000 (after 20th October)</span>
             {/* Duplicate for seamless loop */}
             <span>📢 Paper Notification is in Progress</span>
-            <span>🎉 Registration Extended upto 15th October 2026</span>
-            <span>📅 Last Date for Registration: 15-10-2026</span>
-            <span>🔒 Registration Closing: 15-10-2026</span>
-            <span>⚠️ Late Submission Processing Charge: Rs. 1,000 (after 15th October)</span>
+            <span>🎉 Registration Extended upto 20th October 2026</span>
+            <span>📅 Last Date for Registration: 20-10-2026</span>
+            <span>🔒 Registration Closing: 25-10-2026</span>
+            <span>⚠️ Late Submission Processing Charge: Rs. 1,000 (after 20th October)</span>
           </div>
           <style>
             {`
@@ -161,14 +161,14 @@ const Registration = () => {
               {
                 label: "Last Date for Registration",
                 oldDate: "10th October, 2026",
-                newDate: "15th October, 2026",
+                newDate: "20th October, 2026",
                 badge: "REGISTRATION",
                 badgeColor: "bg-emerald-500/20 text-emerald-300 border-emerald-400/30",
                 dateColor: "text-emerald-300",
               },
               {
                 label: "Registration Closing Date",
-                newDate: "15th October, 2026",
+                newDate: "25th October, 2026",
                 badge: "CLOSING",
                 badgeColor: "bg-rose-500/20 text-rose-300 border-rose-400/30",
                 dateColor: "text-rose-300",
@@ -203,7 +203,7 @@ const Registration = () => {
 
           <div className="w-full bg-amber-500/20 border border-amber-400/50 p-3.5 sm:p-4 rounded-2xl text-amber-200 text-xs sm:text-sm font-semibold flex items-center justify-center gap-2.5 text-center">
             <AlertCircle className="w-5 h-5 text-amber-300 shrink-0" />
-            <span>Processing charge of <strong className="text-amber-300 font-bold">Rs. 1,000</strong> will be charged for late submissions after 15th October.</span>
+            <span>Registration closes on <strong className="text-amber-300 font-bold">25th October 2026</strong>. Processing charge of <strong className="text-amber-300 font-bold">Rs. 1,000</strong> will be charged for late submissions after 20th October.</span>
           </div>
         </div>
 
@@ -270,7 +270,7 @@ const Registration = () => {
               <div className="flex gap-3 bg-amber-100/60 p-3.5 rounded-xl border border-amber-300">
                 <AlertCircle className="w-6 h-6 text-amber-700 shrink-0 mt-0.5" />
                 <p className="text-amber-950 font-medium">
-                  <strong>Key Registration Deadlines:</strong> The last date for registration is <strong>15th October 2026</strong>. A processing charge of <strong>Rs. 1,000</strong> will be charged for late submissions after 15th October.
+                  <strong>Key Registration Deadlines:</strong> The last date for registration is <strong>20th October 2026</strong>. A processing charge of <strong>Rs. 1,000</strong> will be charged for late submissions after 20th October. (Hard deadline: <strong>25th October 2026</strong>).
                 </p>
               </div>
             </div>
@@ -396,7 +396,7 @@ const Registration = () => {
             </p>
             <p className="flex items-center gap-2 text-amber-800 font-semibold bg-amber-50 p-2.5 rounded-xl border border-amber-200">
               <span className="w-2 h-2 rounded-full bg-amber-500 shrink-0"></span>
-              A processing charge of Rs. 1,000 will be charged for late submissions after 15th October.
+              Registration closes on 25th October 2026. Processing charge of Rs. 1,000 will be charged for late submissions after 20th October.
             </p>
           </div>
         </div>

@@ -14,7 +14,7 @@ const AnnouncementSlider = () => {
     {
       badge: "EXTENDED",
       title: "Registration Deadline Extended",
-      desc: "Registration is extended up to 15th October 2026. Submit your registration soon!",
+      desc: "Registration is extended up to 20th October 2026. Submit your registration soon!",
       link: "#/registration",
       linkText: "Register Now",
       icon: <Sparkles className="w-4 h-4 text-yellow-300 shrink-0" />,

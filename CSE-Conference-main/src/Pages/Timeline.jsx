@@ -130,7 +130,7 @@ const Timeline = () => {
         {/* Late Submission Notice */}
         <div className="w-full bg-amber-500/20 border border-amber-400/60 rounded-xl p-3.5 md:p-4 text-amber-200 text-xs sm:text-sm md:text-base font-semibold flex items-center justify-center gap-2 text-center">
           <span className="text-xl shrink-0">⚠️</span>
-          <span>Registration closes on <strong className="text-amber-300 font-bold">25th October 2026</strong>. Late submission processing charges of <strong className="text-amber-300 font-bold">Rs. 1,000</strong> apply after 20th October.</span>
+          <span>Registration closes on <strong className="text-amber-300 font-bold">25th October 2026</strong>. Late submission processing charges of <strong className="text-amber-300 font-bold">Rs. 1,000</strong> apply after 25th October.</span>
         </div>
       </div>
     </div>

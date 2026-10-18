@@ -270,7 +270,7 @@ const Registration = () => {
               <div className="flex gap-3 bg-amber-100/60 p-3.5 rounded-xl border border-amber-300">
                 <AlertCircle className="w-6 h-6 text-amber-700 shrink-0 mt-0.5" />
                 <p className="text-amber-950 font-medium">
-                  <strong>Key Registration Deadlines:</strong> The last date for registration is <strong>20th October 2026</strong>. A processing charge of <strong>Rs. 1,000</strong> will be charged for late submissions after 20th October. (Hard deadline: <strong>25th October 2026</strong>).
+                  <strong>Key Registration Deadlines:</strong> The last date for registration is <strong>20th October 2026</strong>. A processing charge of <strong>Rs. 1,000</strong> will be charged for late submissions after 25th October.
                 </p>
               </div>
             </div>
@@ -396,7 +396,7 @@ const Registration = () => {
             </p>
             <p className="flex items-center gap-2 text-amber-800 font-semibold bg-amber-50 p-2.5 rounded-xl border border-amber-200">
               <span className="w-2 h-2 rounded-full bg-amber-500 shrink-0"></span>
-              Registration closes on 25th October 2026. Processing charge of Rs. 1,000 will be charged for late submissions after 20th October.
+              Registration closes on 25th October 2026. Processing charge of Rs. 1,000 will be charged for late submissions after 25th October.
             </p>
           </div>
         </div>

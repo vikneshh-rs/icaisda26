@@ -272,6 +272,7 @@ export default function PaperRegistration() {
             mode_of_participation: form.modeOfParticipation,
             domain: domain === 'Others' ? customDomain : domain,
             topic: domain === 'Others' ? customTopic : topic,
+            submission_type: registrationType,
             payment_proof_url: paymentProofURL,
             mode_of_payment: form.modeOfPayment,
             utr_no: form.utrNo,

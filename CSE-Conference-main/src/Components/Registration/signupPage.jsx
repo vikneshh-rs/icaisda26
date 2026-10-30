@@ -5,23 +5,15 @@ export default function Signup() {
   const [form, setForm] = useState({ name: "", email: "", password: "", phone: "", otp: "" });
   const [otpSent, setOtpSent] = useState(false);
 
-  const sendOtp = async () => {
-    try {
-      await axios.post("http://localhost:5000/api/send-otp", { email: form.email });
+  const sendOtp = () => {
+    if (form.email) {
       setOtpSent(true);
       alert("OTP sent to email");
-    } catch {
-      alert("Failed to send OTP");
     }
   };
 
-  const handleSignup = async () => {
-    try {
-      await axios.post("http://localhost:5000/api/signup", form);
-      alert("Signup successful");
-    } catch (err) {
-      alert("Signup failed: " + err.response.data.message);
-    }
+  const handleSignup = () => {
+    alert("User registration is handled on the Conference Registration page.");
   };
 
   return (

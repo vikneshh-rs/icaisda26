@@ -1,21 +1,18 @@
 import { useState } from "react";
-import axios from "axios";
 
 export default function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const handleLogin = async () => {
-    try {
-      await axios.post("http://localhost:5000/api/login", { email, password });
-      alert("Login successful");
-    } catch {
-      alert("Login failed");
+  const handleLogin = (e) => {
+    e.preventDefault();
+    if (email && password) {
+      alert("Registration management is handled via the Admin Portal.");
     }
   };
 
   return (
-    <div className="max-w-md mx-auto bg-white p-4 rounded shadow">
+    <form onSubmit={handleLogin} className="max-w-md mx-auto bg-white p-4 rounded shadow">
       <h2 className="text-xl font-semibold mb-4">Login</h2>
       <input
         type="email"
@@ -23,6 +20,7 @@ export default function Login() {
         value={email}
         onChange={(e) => setEmail(e.target.value)}
         className="w-full p-2 border mb-2 rounded"
+        required
       />
       <input
         type="password"
@@ -30,8 +28,9 @@ export default function Login() {
         value={password}
         onChange={(e) => setPassword(e.target.value)}
         className="w-full p-2 border mb-2 rounded"
+        required
       />
-      <button onClick={handleLogin} className="bg-blue-500 text-white px-4 py-2 rounded">Login</button>
-    </div>
+      <button type="submit" className="bg-blue-500 text-white px-4 py-2 rounded">Login</button>
+    </form>
   );
 }

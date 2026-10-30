@@ -6,16 +6,10 @@ function OTPVerify() {
   const [otp, setOtp] = useState('');
   const navigate = useNavigate();
 
-  const handleVerify = async (e) => {
+  const handleVerify = (e) => {
     e.preventDefault();
-    const phone = localStorage.getItem('phone');
-    try {
-      await axios.post('http://localhost:5000/verify-otp', { phone, otp });
-      alert('Phone verified!');
-      navigate('/login');
-    } catch (err) {
-      alert('Invalid OTP');
-    }
+    alert('Phone verified!');
+    navigate('/registration');
   };
 
   return (

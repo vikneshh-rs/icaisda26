@@ -1,7 +1,7 @@
 import React from "react";
 import heroMain from "../../assets/Images/icaHome.png";
 import heroSub from "../../assets/Images/cs10.jpg";
-import { FaCalendarAlt, FaExternalLinkAlt } from "react-icons/fa";
+import { FaCalendarAlt, FaExternalLinkAlt, FaLock } from "react-icons/fa";
 import icdnLogo from "../../assets/Images/logos/ptulogo2.png";
 
 const Hero = () => {
@@ -38,6 +38,18 @@ const Hero = () => {
         <div>
           <span className="inline-block px-4 py-2 bg-blue-800 text-white font-bold text-xs sm:text-sm md:text-base rounded-full shadow-sm">
             DEPARTMENT OF COMPUTER SCIENCE AND ENGINEERING
+          </span>
+        </div>
+
+        {/* Prominent Registration Closed Notice */}
+        <div className="flex items-center gap-2.5 px-4 py-2.5 bg-rose-50 border border-rose-300 text-rose-800 rounded-2xl shadow-sm">
+          <span className="relative flex h-3 w-3 shrink-0">
+            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-rose-400 opacity-75"></span>
+            <span className="relative inline-flex rounded-full h-3 w-3 bg-rose-600"></span>
+          </span>
+          <FaLock className="text-rose-600 text-xs shrink-0" />
+          <span className="text-xs sm:text-sm font-bold">
+            Registrations for ICAISDA-2026 are officially <span className="text-rose-700 underline font-black">CLOSED</span>.
           </span>
         </div>
 
@@ -86,4 +98,3 @@ const Hero = () => {
 };
 
 export default Hero;
-

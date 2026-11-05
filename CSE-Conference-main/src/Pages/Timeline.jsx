@@ -33,7 +33,7 @@ const Timeline = () => {
       </div>
 
       {/* Content Box with Semi-Transparent Background */}
-      <div className="relative z-10 flex flex-col items-center gap-6 border border-gray-400 bg-black/50 p-8 rounded-lg shadow-lg  max-w-3xl w-full mx-4 text-center">
+      <div className="relative z-10 flex flex-col items-center gap-6 border border-gray-400 bg-black/50 p-8 rounded-lg shadow-lg max-w-3xl w-full mx-4 text-center">
         <h1 className="text-4xl font-bold text-white drop-shadow-lg">
           Important Dates
         </h1>
@@ -60,7 +60,8 @@ const Timeline = () => {
                 },
                 {
                   label: "Registration Closing Date",
-                  newDate: "25th October, 2026",
+                  newDate: "25th October, 2026 (CLOSED)",
+                  isClosed: true,
                 },
                 {
                   label: "Conference Date",
@@ -75,7 +76,9 @@ const Timeline = () => {
                         {row.oldDate}
                       </span>
                     )}
-                    <span className="text-yellow-300 font-bold">{row.newDate}</span>
+                    <span className={row.isClosed ? "text-rose-400 font-black" : "text-yellow-300 font-bold"}>
+                      {row.newDate}
+                    </span>
                   </th>
                 </tr>
               ))}
@@ -103,7 +106,8 @@ const Timeline = () => {
             },
             {
               label: "Registration Closing Date",
-              newDate: "25th October, 2026",
+              newDate: "25th October, 2026 (CLOSED)",
+              isClosed: true,
             },
             {
               label: "Conference Date",
@@ -121,16 +125,18 @@ const Timeline = () => {
                     {row.oldDate}
                   </span>
                 )}
-                <span className="text-yellow-300 font-bold text-sm sm:text-base">{row.newDate}</span>
+                <span className={row.isClosed ? "text-rose-400 font-black text-sm sm:text-base" : "text-yellow-300 font-bold text-sm sm:text-base"}>
+                  {row.newDate}
+                </span>
               </div>
             </div>
           ))}
         </div>
 
-        {/* Late Submission Notice */}
-        <div className="w-full bg-amber-500/20 border border-amber-400/60 rounded-xl p-3.5 md:p-4 text-amber-200 text-xs sm:text-sm md:text-base font-semibold flex items-center justify-center gap-2 text-center">
-          <span className="text-xl shrink-0">⚠️</span>
-          <span>Registration closes on <strong className="text-amber-300 font-bold">25th October 2026</strong>. Late submission processing charges of <strong className="text-amber-300 font-bold">Rs. 1,000</strong> apply after 25th October.</span>
+        {/* Closed Notice */}
+        <div className="w-full bg-rose-500/20 border border-rose-400/60 rounded-xl p-3.5 md:p-4 text-rose-200 text-xs sm:text-sm md:text-base font-semibold flex items-center justify-center gap-2 text-center">
+          <span className="text-xl shrink-0">🔒</span>
+          <span>Registrations closed on <strong className="text-rose-300 font-bold">25th October 2026</strong>. Registrations are no longer accepted.</span>
         </div>
       </div>
     </div>

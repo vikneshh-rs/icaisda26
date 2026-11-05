@@ -9,7 +9,8 @@ import {
   CreditCard, 
   AlertCircle, 
   CheckCircle,
-  HelpCircle
+  HelpCircle,
+  Lock
 } from 'lucide-react';
 
 const aiTopics = [
@@ -224,6 +225,8 @@ export default function PaperRegistration() {
   // 🔹 Handle form submission
   const handleSubmit = async (e) => {
     e.preventDefault();
+    alert('Registrations for ICAISDA-2026 are officially closed.');
+    return;
 
     if (!supabase) {
       alert('Supabase is not configured yet. Please configure VITE_SUPABASE_URL and VITE_SUPABASE_ANON_KEY in your environment variables.');
@@ -295,6 +298,60 @@ export default function PaperRegistration() {
       setLoading(false);
     }
   };
+
+  const isRegistrationClosed = true;
+
+  if (isRegistrationClosed) {
+    return (
+      <div className="min-h-screen flex justify-center mt-20 items-center w-full bg-gradient-to-br from-slate-50 via-rose-50 to-indigo-50 py-12 px-4">
+        <div className="bg-white shadow-2xl rounded-3xl p-8 md:p-12 w-full max-w-2xl border border-rose-100 text-center space-y-6">
+          <div className="w-20 h-20 bg-rose-100 rounded-full flex items-center justify-center text-rose-600 mx-auto border border-rose-200 shadow-inner">
+            <Lock className="w-10 h-10" />
+          </div>
+          
+          <div className="space-y-3">
+            <span className="bg-rose-100 text-rose-800 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
+              Registration Closed
+            </span>
+            <h1 className="text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight">
+              Paper Registration is Closed
+            </h1>
+            <p className="text-slate-600 text-sm md:text-base leading-relaxed">
+              The registration and payment deadline for ICAISDA-2026 paper submissions has passed (<strong className="text-slate-900 font-bold">25th October 2026</strong>). New paper registrations and payments are no longer accepted.
+            </p>
+          </div>
+
+          <div className="bg-slate-50 border border-slate-200 rounded-2xl p-6 text-left space-y-3">
+            <h3 className="text-sm font-bold text-slate-800 uppercase tracking-wider">Submitted Already?</h3>
+            <p className="text-xs text-slate-600 leading-relaxed">
+              If you have already submitted your paper and payment proof and need assistance regarding verification or the conference schedule, please contact the registration committee:
+            </p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 pt-2 text-xs font-medium text-slate-700">
+              <div>• Dr. K. Saruladha: <a href="tel:+919442396080" className="text-blue-600 font-bold hover:underline">+91 9442396080</a></div>
+              <div>• Dr. P. Salini: <a href="tel:+919994738640" className="text-blue-600 font-bold hover:underline">+91 9994738640</a></div>
+              <div>• Dr. M. Thenmozhi: <a href="tel:+919500893708" className="text-blue-600 font-bold hover:underline">+91 9500893708</a></div>
+              <div>• Dr. J.I. Sheeba: <a href="tel:+919443084976" className="text-blue-600 font-bold hover:underline">+91 9443084976</a></div>
+            </div>
+          </div>
+
+          <div className="pt-2 flex flex-col sm:flex-row gap-3 justify-center">
+            <button
+              onClick={() => navigate('/registration')}
+              className="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl text-sm transition shadow"
+            >
+              Registration Details
+            </button>
+            <button
+              onClick={() => navigate('/')}
+              className="px-6 py-3 bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold rounded-xl text-sm transition"
+            >
+              Back to Home
+            </button>
+          </div>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen flex justify-center mt-20 items-center w-full bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 py-12 px-4">

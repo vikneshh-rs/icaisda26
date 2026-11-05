@@ -4,12 +4,12 @@ import { FileText, ExternalLink, Sparkles, BookOpen, BellRing, AlertCircle } fro
 const AnnouncementSlider = () => {
   const announcements = [
     {
-      badge: "IMPORTANT",
-      title: "Registration @ Rs.8000 till 20.10.2026",
-      desc: "With additional late processing fee Rs.1000 till 25.10.2026 (Hard Deadline)",
+      badge: "CLOSED",
+      title: "Registrations are Officially CLOSED",
+      desc: "Registration deadline has passed. Thank you for the overwhelming response!",
       link: "#/registration",
-      linkText: "Register Now",
-      icon: <Sparkles className="w-4 h-4 text-yellow-300 shrink-0 animate-spin" />,
+      linkText: "View Notice",
+      icon: <AlertCircle className="w-4 h-4 text-yellow-300 shrink-0" />,
       highlight: true,
       blink: true,
     },

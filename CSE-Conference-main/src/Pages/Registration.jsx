@@ -11,7 +11,8 @@ import {
   ShieldAlert,
   CreditCard,
   Award,
-  Users2
+  Users2,
+  Lock
 } from "lucide-react";
 
 const Registration = () => {
@@ -30,9 +31,10 @@ const Registration = () => {
       bg: "bg-gradient-to-b from-blue-50/70 to-blue-100/30",
       border: "border-blue-200",
       textColor: "text-blue-900",
-      btnText: "Register & Submit Paper",
-      link: "/paperregistration",
-      btnBg: "bg-blue-600 hover:bg-blue-700"
+      btnText: "Registration Closed",
+      link: "#",
+      isClosed: true,
+      btnBg: "bg-slate-300 text-slate-600 cursor-not-allowed"
     },
     {
       title: "Join as a Presenter",
@@ -46,9 +48,10 @@ const Registration = () => {
       bg: "bg-gradient-to-b from-cyan-50/70 to-cyan-100/30",
       border: "border-cyan-200",
       textColor: "text-cyan-900",
-      btnText: "Register Abstract",
-      link: "/paperregistration",
-      btnBg: "bg-cyan-600 hover:bg-cyan-700"
+      btnText: "Registration Closed",
+      link: "#",
+      isClosed: true,
+      btnBg: "bg-slate-300 text-slate-600 cursor-not-allowed"
     },
     {
       title: "Join as a Listener",
@@ -64,9 +67,10 @@ const Registration = () => {
       bg: "bg-gradient-to-b from-emerald-50/70 to-emerald-100/30",
       border: "border-emerald-200",
       textColor: "text-emerald-900",
-      btnText: "Register as Listener",
-      link: "/listenerregistration",
-      btnBg: "bg-emerald-600 hover:bg-emerald-700"
+      btnText: "Registration Closed",
+      link: "#",
+      isClosed: true,
+      btnBg: "bg-slate-300 text-slate-600 cursor-not-allowed"
     }
   ];
 
@@ -94,25 +98,41 @@ const Registration = () => {
             REGISTRATION
           </h1>
           <p className="text-slate-600 max-w-2xl mx-auto text-lg">
-            Register for ICAISDA-2026 to present your research, connect with leading scientists, or attend sessions.
+            Registration information and schedule for ICAISDA-2026.
           </p>
           <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-cyan-500 mx-auto rounded-full"></div>
         </div>
 
+        {/* PROMINENT REGISTRATION CLOSED BANNER */}
+        <div className="w-full bg-gradient-to-br from-rose-950 via-rose-900 to-red-950 text-white rounded-3xl p-6 sm:p-8 md:p-10 shadow-2xl border border-rose-400/40 text-center space-y-4">
+          <div className="inline-flex items-center gap-2 bg-rose-500/30 border border-rose-400/50 text-rose-200 text-xs sm:text-sm uppercase px-4 py-1.5 rounded-full font-black tracking-wider shadow-inner">
+            <Lock className="w-4 h-4 text-yellow-300" />
+            Official Conference Notice
+          </div>
+          <h2 className="text-2xl sm:text-3xl md:text-5xl font-black text-white tracking-tight">
+            Registrations are Officially CLOSED
+          </h2>
+          <p className="text-rose-100 max-w-3xl mx-auto text-sm sm:text-base md:text-lg leading-relaxed">
+            The hard deadline (<strong className="text-yellow-300 font-bold">25th October 2026</strong>) for ICAISDA-2026 has passed. 
+            Registrations for <strong>Presenters, Paper Authors, and Listeners are now closed</strong> and new submissions are no longer accepted.
+          </p>
+          <div className="pt-2 text-xs sm:text-sm text-rose-200 font-medium">
+            Thank you for the overwhelming interest and submissions! For inquiries regarding previously confirmed registrations, please contact the registration committee below.
+          </div>
+        </div>
+
         {/* SLIDER / MARQUEE BANNER */}
-        <div className="w-full bg-emerald-50/80 border-y border-emerald-100 py-3 overflow-hidden rounded-xl shadow-inner relative">
-          <div className="animate-marquee whitespace-nowrap text-sm md:text-base font-bold text-emerald-700 uppercase tracking-widest flex items-center gap-12">
-            <span>📢 Paper Notification is in Progress</span>
-            <span>🎉 Registration @ Rs.8000 till 20.10.2026</span>
-            <span>⚠️ With additional late processing fee Rs.1000 till 25.10.2026 (Hard Deadline)</span>
-            <span>📅 Last Date for Registration: 20-10-2026</span>
-            <span>🔒 Registration Closing: 25-10-2026</span>
+        <div className="w-full bg-rose-50/90 border-y border-rose-200 py-3 overflow-hidden rounded-xl shadow-inner relative">
+          <div className="animate-marquee whitespace-nowrap text-sm md:text-base font-bold text-rose-800 uppercase tracking-widest flex items-center gap-12">
+            <span>🔒 Registrations are Officially Closed</span>
+            <span>📢 Registration Deadline (25.10.2026) has Passed</span>
+            <span>🎉 Thank You for the Overwhelming Response</span>
+            <span>📅 Conference Dates: 12 - 13, November, 2026</span>
             {/* Duplicate for seamless loop */}
-            <span>📢 Paper Notification is in Progress</span>
-            <span>🎉 Registration @ Rs.8000 till 20.10.2026</span>
-            <span>⚠️ With additional late processing fee Rs.1000 till 25.10.2026 (Hard Deadline)</span>
-            <span>📅 Last Date for Registration: 20-10-2026</span>
-            <span>🔒 Registration Closing: 25-10-2026</span>
+            <span>🔒 Registrations are Officially Closed</span>
+            <span>📢 Registration Deadline (25.10.2026) has Passed</span>
+            <span>🎉 Thank You for the Overwhelming Response</span>
+            <span>📅 Conference Dates: 12 - 13, November, 2026</span>
           </div>
           <style>
             {`
@@ -136,7 +156,7 @@ const Registration = () => {
               Conference &amp; Registration Schedule
             </span>
             <h3 className="text-2xl sm:text-3xl font-extrabold text-white mt-2">Important Dates &amp; Deadlines</h3>
-            <p className="text-slate-300 text-xs sm:text-sm mt-1">Please adhere to the conference schedule to confirm your participation.</p>
+            <p className="text-slate-300 text-xs sm:text-sm mt-1">Please adhere to the conference schedule.</p>
           </div>
 
           {/* Schedule Grid - 100% visible on Mobile & Desktop */}
@@ -168,9 +188,9 @@ const Registration = () => {
               },
               {
                 label: "Registration Closing Date",
-                newDate: "25th October, 2026",
-                badge: "CLOSING",
-                badgeColor: "bg-rose-500/20 text-rose-300 border-rose-400/30",
+                newDate: "25th October, 2026 (CLOSED)",
+                badge: "CLOSED",
+                badgeColor: "bg-rose-500/30 text-rose-300 border-rose-400/40",
                 dateColor: "text-rose-300",
               },
               {
@@ -201,21 +221,25 @@ const Registration = () => {
             ))}
           </div>
 
-          <div className="w-full bg-amber-500/20 border border-amber-400/50 p-3.5 sm:p-4 rounded-2xl text-amber-200 text-xs sm:text-sm font-semibold flex items-center justify-center gap-2.5 text-center">
-            <AlertCircle className="w-5 h-5 text-amber-300 shrink-0" />
-            <span>Registration @ <strong className="text-amber-300 font-bold">Rs.8000</strong> till <strong className="text-amber-300 font-bold">20.10.2026</strong>. With additional late processing fee of <strong className="text-amber-300 font-bold">Rs. 1,000</strong> till <strong className="text-amber-300 font-bold">25.10.2026 (Hard Deadline)</strong>.</span>
+          <div className="w-full bg-rose-500/20 border border-rose-400/50 p-3.5 sm:p-4 rounded-2xl text-rose-200 text-xs sm:text-sm font-semibold flex items-center justify-center gap-2.5 text-center">
+            <Lock className="w-5 h-5 text-yellow-300 shrink-0" />
+            <span>Registrations closed on <strong className="text-yellow-300 font-bold">25th October 2026</strong>. The portal is no longer accepting submissions.</span>
           </div>
         </div>
-
-
 
         {/* 3 CARDS SECTION */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {cards.map((card, idx) => (
             <div
               key={idx}
-              className={`bg-white border ${card.border} ${card.bg} rounded-2xl p-8 flex flex-col justify-between shadow-lg hover:shadow-xl hover:scale-[1.02] transition-all duration-300`}
+              className={`bg-white border ${card.border} ${card.bg} rounded-2xl p-8 flex flex-col justify-between shadow-lg relative overflow-hidden`}
             >
+              {/* Closed Badge Ribbon */}
+              <div className="absolute top-4 right-4 bg-rose-100 text-rose-800 text-[11px] font-extrabold px-3 py-1 rounded-full border border-rose-300 flex items-center gap-1">
+                <Lock className="w-3 h-3 text-rose-600" />
+                CLOSED
+              </div>
+
               <div className="space-y-6 flex-grow">
                 <div className="flex items-center justify-between">
                   <span className="text-xs font-bold uppercase tracking-wider text-slate-500">{card.title}</span>
@@ -235,12 +259,10 @@ const Registration = () => {
               </div>
 
               <div className="pt-6">
-                <Link
-                  to={card.link}
-                  className={`block text-center py-4 rounded-2xl text-white font-extrabold text-base md:text-lg transition-all duration-300 hover:shadow-lg hover:scale-[1.02] ${card.btnBg}`}
-                >
-                  {card.btnText}
-                </Link>
+                <div className="block text-center py-4 rounded-2xl bg-rose-50 border border-rose-200 text-rose-700 font-extrabold text-base md:text-lg shadow-sm cursor-not-allowed flex items-center justify-center gap-2">
+                  <Lock className="w-5 h-5 text-rose-600" />
+                  <span>Registration Closed</span>
+                </div>
               </div>
             </div>
           ))}
@@ -267,10 +289,10 @@ const Registration = () => {
                   A maximum of <strong>three authors</strong> is permitted under a single paper registration. If a paper has more than three authors, all authors may be listed in the paper. However, authors beyond the first three must register separately under the <strong>Listener</strong> category if they wish to participate.
                 </p>
               </div>
-              <div className="flex gap-3 bg-amber-100/60 p-3.5 rounded-xl border border-amber-300">
-                <AlertCircle className="w-6 h-6 text-amber-700 shrink-0 mt-0.5" />
-                <p className="text-amber-950 font-medium">
-                  <strong>Key Registration Deadlines:</strong> The last date for registration is <strong>20th October 2026</strong>. A processing charge of <strong>Rs. 1,000</strong> will be charged for late submissions after 25th October.
+              <div className="flex gap-3 bg-rose-100/70 p-3.5 rounded-xl border border-rose-300">
+                <Lock className="w-6 h-6 text-rose-700 shrink-0 mt-0.5" />
+                <p className="text-rose-950 font-medium">
+                  <strong>Registration Closed:</strong> Registrations for ICAISDA-2026 are officially closed as of <strong>25th October 2026</strong>. No further registrations will be processed.
                 </p>
               </div>
             </div>
@@ -284,7 +306,7 @@ const Registration = () => {
                 <h3 className="text-xl font-semibold">Registration Support</h3>
               </div>
               <p className="text-slate-500 text-sm mt-2">
-                For further information or assistance regarding registration, please contact:
+                For further assistance regarding verified registrations, please contact:
               </p>
             </div>
             <div className="grid grid-cols-1 gap-4 my-4">
@@ -394,9 +416,9 @@ const Registration = () => {
               <span className="w-1.5 h-1.5 rounded-full bg-cyan-600 shrink-0"></span>
               Completed registrations will be acknowledged by the Organizing Committee within 2-5 workdays after receiving your payment.
             </p>
-            <p className="flex items-center gap-2 text-amber-800 font-semibold bg-amber-50 p-2.5 rounded-xl border border-amber-200">
-              <span className="w-2 h-2 rounded-full bg-amber-500 shrink-0"></span>
-              Registration closes on 25th October 2026. Processing charge of Rs. 1,000 will be charged for late submissions after 25th October.
+            <p className="flex items-center gap-2 text-rose-800 font-semibold bg-rose-50 p-2.5 rounded-xl border border-rose-200">
+              <span className="w-2 h-2 rounded-full bg-rose-500 shrink-0"></span>
+              Registration closed on 25th October 2026. The registration portal is currently closed.
             </p>
           </div>
         </div>

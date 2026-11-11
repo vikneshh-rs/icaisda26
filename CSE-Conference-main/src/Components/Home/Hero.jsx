@@ -1,7 +1,7 @@
 import React from "react";
 import heroMain from "../../assets/Images/icaHome.png";
 import heroSub from "../../assets/Images/cs10.jpg";
-import { FaCalendarAlt, FaExternalLinkAlt, FaLock, FaFilePowerpoint, FaDownload } from "react-icons/fa";
+import { FaCalendarAlt, FaExternalLinkAlt, FaLock, FaFilePowerpoint, FaDownload, FaLaptop } from "react-icons/fa";
 import icdnLogo from "../../assets/Images/logos/ptulogo2.png";
 
 const Hero = () => {
@@ -55,6 +55,18 @@ const Hero = () => {
 
         {/* Links and CTA */}
         <div className="flex flex-wrap items-center gap-3 pt-2">
+          {/* Online Presentation Schedule Button */}
+          <a
+            href="https://drive.google.com/file/d/1AXle_xKQqhg3lna4tiWKwRehvM4YOG3f/view?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-5 py-3 bg-gradient-to-r from-blue-700 via-indigo-600 to-violet-700 hover:from-blue-800 hover:to-violet-800 text-white font-bold rounded-full shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105"
+          >
+            <FaLaptop className="text-base" />
+            <span>Online Presentation Schedule</span>
+            <FaExternalLinkAlt className="text-xs opacity-80" />
+          </a>
+
           {/* Download Offline Schedule Button */}
           <a
             href="https://drive.google.com/file/d/1HnFpmMTMuvB2eQAdNBaneIINMdS1udrM/view?usp=sharing"

@@ -31,6 +31,14 @@ const Homepage = () => {
           </div>
           <div className="flex flex-wrap items-center justify-center gap-2.5 shrink-0">
             <a
+              href="https://drive.google.com/file/d/1AXle_xKQqhg3lna4tiWKwRehvM4YOG3f/view?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-4 py-2 bg-gradient-to-r from-blue-600 via-indigo-600 to-violet-700 hover:from-blue-700 hover:to-violet-800 text-white font-extrabold text-xs sm:text-sm rounded-xl transition shadow flex items-center gap-1.5"
+            >
+              <span>🌐 Online Presentation Schedule</span>
+            </a>
+            <a
               href="https://drive.google.com/file/d/1HnFpmMTMuvB2eQAdNBaneIINMdS1udrM/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"

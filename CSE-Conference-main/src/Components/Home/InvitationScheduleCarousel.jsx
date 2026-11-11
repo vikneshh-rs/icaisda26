@@ -8,7 +8,9 @@ import {
   FaDownload,
   FaCalendarAlt,
   FaFileAlt,
-  FaExternalLinkAlt
+  FaExternalLinkAlt,
+  FaVideo,
+  FaLaptop
 } from "react-icons/fa";
 
 // Import schedule and invitation images
@@ -21,7 +23,16 @@ import schedule6 from "../../assets/Images/schedule/schedule-6.jpg";
 import schedule7 from "../../assets/Images/schedule/schedule-7.jpg";
 import schedule8 from "../../assets/Images/schedule/schedule-8.jpg";
 
+// Import online schedule images
+import online1 from "../../assets/Images/schedule/online-schedule-1.jpg";
+import online2 from "../../assets/Images/schedule/online-schedule-2.jpg";
+import online3 from "../../assets/Images/schedule/online-schedule-3.jpg";
+import online4 from "../../assets/Images/schedule/online-schedule-4.jpg";
+import online5 from "../../assets/Images/schedule/online-schedule-5.jpg";
+import online6 from "../../assets/Images/schedule/online-schedule-6.jpg";
+
 const scheduleImages = [
+  // Offline Invitation & Program Schedule
   {
     id: 1,
     src: schedule1,
@@ -53,30 +64,86 @@ const scheduleImages = [
   {
     id: 5,
     src: schedule5,
-    title: "Track 1: Session 1-A Presentation Schedule",
+    title: "Track 1: Session 1-A Presentation Schedule (Offline)",
     tag: "Presentations",
     subtitle: "12-11-2026 • Artificial Intelligence • Auditorium Main Hall",
   },
   {
     id: 6,
     src: schedule6,
-    title: "Track 2: Session 1-B Presentation Schedule",
+    title: "Track 2: Session 1-B Presentation Schedule (Offline)",
     tag: "Presentations",
     subtitle: "12-11-2026 • AI Applications in Industry • Seminar Hall",
   },
   {
     id: 7,
     src: schedule7,
-    title: "Track 1: Session 1-C Presentation Schedule",
+    title: "Track 1: Session 1-C Presentation Schedule (Offline)",
     tag: "Presentations",
     subtitle: "12-11-2026 • Artificial Intelligence • Multi-purpose Hall",
   },
   {
     id: 8,
     src: schedule8,
-    title: "Track 4 & 5: Session 2-A Presentation Schedule",
+    title: "Track 4 & 5: Session 2-A Presentation Schedule (Offline)",
     tag: "Presentations",
     subtitle: "13-11-2026 • Communications & Sustainable Tech • Multi-purpose Hall",
+  },
+
+  // Online Presentation Schedules
+  {
+    id: 9,
+    src: online1,
+    title: "Online Session 1-A: Track 1 (AI)",
+    tag: "Online",
+    mode: "Online Mode",
+    gmeet: "https://meet.google.com/rpd-bjzr-wan",
+    subtitle: "12-11-2026 • 2:00 PM - 5:00 PM • AI & DS Lab • GMeet Available",
+  },
+  {
+    id: 10,
+    src: online2,
+    title: "Online Session 1-B: Track 1 (AI)",
+    tag: "Online",
+    mode: "Online Mode",
+    gmeet: "https://meet.google.com/bmb-nnxr-xjv",
+    subtitle: "12-11-2026 • 2:00 PM - 4:45 PM • Onebill AI CoE • GMeet Available",
+  },
+  {
+    id: 11,
+    src: online3,
+    title: "Online Session 1-C: Track 1 (AI)",
+    tag: "Online",
+    mode: "Online Mode",
+    gmeet: "https://meet.google.com/iop-hbdi-pgp",
+    subtitle: "12-11-2026 • 2:00 PM - 4:30 PM • Innovation Centre • GMeet Available",
+  },
+  {
+    id: 12,
+    src: online4,
+    title: "Online Session 2-A: Track 2 & 3 (AI Apps & Secure Data)",
+    tag: "Online",
+    mode: "Online Mode",
+    gmeet: "https://meet.google.com/yfs-koqi-ifs",
+    subtitle: "13-11-2026 • 9:30 AM - 12:00 PM • AI & DS Lab • GMeet Available",
+  },
+  {
+    id: 13,
+    src: online5,
+    title: "Online Session 2-B: Track 4 (Secure Comms & Computing)",
+    tag: "Online",
+    mode: "Online Mode",
+    gmeet: "https://meet.google.com/nmt-pnbh-shb",
+    subtitle: "13-11-2026 • 9:30 AM - 12:15 PM • Onebill AI CoE • GMeet Available",
+  },
+  {
+    id: 14,
+    src: online6,
+    title: "Online Session 2-C: Track 5 (Sustainable Dev & Emerging Tech)",
+    tag: "Online",
+    mode: "Online Mode",
+    gmeet: "https://meet.google.com/pbp-gyms-udh",
+    subtitle: "13-11-2026 • 9:30 AM - 12:00 PM • Innovation Centre • GMeet Available",
   },
 ];
 
@@ -90,6 +157,7 @@ const InvitationScheduleCarousel = () => {
   // Filter items based on active tab
   const filteredImages = scheduleImages.filter((item) => {
     if (activeTab === "all") return true;
+    if (activeTab === "online") return item.tag === "Online";
     if (activeTab === "invitation") return item.tag === "Invitation";
     if (activeTab === "schedule") return item.tag === "Schedule";
     if (activeTab === "presentations") return item.tag === "Presentations";
@@ -180,11 +248,22 @@ const InvitationScheduleCarousel = () => {
           </p>
 
           <p className="text-sm md:text-base text-slate-600 max-w-2xl mx-auto leading-relaxed">
-            View the official conference inauguration invitation, keynote schedule, and detailed paper presentation track schedules. Click any page to view in full screen.
+            View the official conference inauguration invitation, keynote schedule, and detailed presentation track schedules for both Offline and Online modes. Click any page to view full screen.
           </p>
           
-          {/* Download Offline Schedule Action */}
+          {/* Action Buttons for Offline & Online Schedules */}
           <div className="pt-2 flex flex-wrap items-center justify-center gap-3">
+            <a
+              href="https://drive.google.com/file/d/1AXle_xKQqhg3lna4tiWKwRehvM4YOG3f/view?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-700 via-indigo-600 to-violet-700 hover:from-blue-800 hover:to-violet-800 text-white font-extrabold text-sm md:text-base rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 hover:scale-105"
+            >
+              <FaLaptop className="text-base" />
+              <span>Online Presentation Schedule</span>
+              <FaExternalLinkAlt className="text-xs opacity-80" />
+            </a>
+
             <a
               href="https://drive.google.com/file/d/1HnFpmMTMuvB2eQAdNBaneIINMdS1udrM/view?usp=sharing"
               target="_blank"
@@ -203,10 +282,11 @@ const InvitationScheduleCarousel = () => {
         {/* Filter Tabs */}
         <div className="flex flex-wrap items-center justify-center gap-2 mb-8">
           {[
-            { id: "all", label: "All Pages (8)" },
+            { id: "all", label: `All Pages (${scheduleImages.length})` },
+            { id: "online", label: "🌐 Online Presentation Schedule (6)" },
             { id: "invitation", label: "Inauguration Invitation (2)" },
             { id: "schedule", label: "Program Schedule (2)" },
-            { id: "presentations", label: "Paper Tracks (4)" },
+            { id: "presentations", label: "Offline Paper Tracks (4)" },
           ].map((tab) => (
             <button
               key={tab.id}
@@ -255,9 +335,11 @@ const InvitationScheduleCarousel = () => {
                     className="relative cursor-pointer group bg-white rounded-2xl shadow-lg hover:shadow-2xl overflow-hidden border border-slate-200 transition-all duration-300 hover:-translate-y-2 w-full max-w-sm flex flex-col justify-between"
                   >
                     {/* Badge */}
-                    <div className="absolute top-3 left-3 z-10">
-                      <span className="px-2.5 py-1 text-[11px] font-black uppercase tracking-wider rounded-lg shadow-sm bg-blue-900/90 text-white backdrop-blur-sm">
-                        {item.tag}
+                    <div className="absolute top-3 left-3 z-10 flex items-center gap-1.5">
+                      <span className={`px-2.5 py-1 text-[11px] font-black uppercase tracking-wider rounded-lg shadow-sm backdrop-blur-sm text-white ${
+                        item.tag === "Online" ? "bg-indigo-600/95" : "bg-blue-900/90"
+                      }`}>
+                        {item.tag === "Online" ? "Online Mode" : item.tag}
                       </span>
                     </div>
 
@@ -286,13 +368,31 @@ const InvitationScheduleCarousel = () => {
                     </div>
 
                     {/* Caption Footer */}
-                    <div className="p-4 bg-white border-t border-slate-100 space-y-1">
-                      <h3 className="text-sm md:text-base font-extrabold text-slate-900 line-clamp-1 group-hover:text-blue-700 transition-colors">
-                        {item.title}
-                      </h3>
-                      <p className="text-xs text-slate-500 line-clamp-1">
-                        {item.subtitle}
-                      </p>
+                    <div className="p-4 bg-white border-t border-slate-100 space-y-2">
+                      <div>
+                        <h3 className="text-sm md:text-base font-extrabold text-slate-900 line-clamp-1 group-hover:text-blue-700 transition-colors">
+                          {item.title}
+                        </h3>
+                        <p className="text-xs text-slate-500 line-clamp-1">
+                          {item.subtitle}
+                        </p>
+                      </div>
+
+                      {/* Direct GMeet link button if available */}
+                      {item.gmeet && (
+                        <div className="pt-1 flex items-center justify-between" onClick={(e) => e.stopPropagation()}>
+                          <a
+                            href={item.gmeet}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-1.5 px-3 py-1 bg-emerald-50 hover:bg-emerald-100 text-emerald-800 border border-emerald-300 text-xs font-bold rounded-lg transition-colors"
+                          >
+                            <FaVideo className="text-emerald-600 text-xs" />
+                            <span>Join Google Meet</span>
+                            <FaExternalLinkAlt className="text-[10px] opacity-75" />
+                          </a>
+                        </div>
+                      )}
                     </div>
                   </motion.div>
                 );
@@ -311,7 +411,7 @@ const InvitationScheduleCarousel = () => {
         </div>
 
         {/* Indicators */}
-        <div className="flex items-center justify-center gap-2 mt-8">
+        <div className="flex items-center justify-center gap-1.5 sm:gap-2 mt-8 flex-wrap">
           {filteredImages.map((img, index) => (
             <button
               key={img.id}
@@ -352,6 +452,21 @@ const InvitationScheduleCarousel = () => {
               </div>
 
               <div className="flex items-center gap-2">
+                {/* GMeet Join Button in Lightbox if available */}
+                {scheduleImages[activeImageIndex].gmeet && (
+                  <a
+                    href={scheduleImages[activeImageIndex].gmeet}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-3 py-2 bg-emerald-600 hover:bg-emerald-700 text-white rounded-full transition-colors flex items-center gap-1.5 text-xs font-extrabold shadow"
+                    title="Join Google Meet Room"
+                  >
+                    <FaVideo />
+                    <span className="hidden sm:inline">Join Google Meet</span>
+                    <FaExternalLinkAlt className="text-[10px]" />
+                  </a>
+                )}
+
                 <a
                   href={scheduleImages[activeImageIndex].src}
                   download={`ICAISDA-2026-${scheduleImages[activeImageIndex].title.replace(/\s+/g, '-')}.jpg`}
@@ -403,7 +518,7 @@ const InvitationScheduleCarousel = () => {
                 className="max-h-[78vh] w-auto mx-auto object-contain rounded-lg"
               />
               
-              <div className="w-full bg-black/80 px-4 py-2.5 text-center border-t border-white/10">
+              <div className="w-full bg-black/80 px-4 py-2.5 text-center border-t border-white/10 space-y-0.5">
                 <p className="text-white font-bold text-sm sm:text-base">
                   {scheduleImages[activeImageIndex].title}
                 </p>
@@ -420,4 +535,3 @@ const InvitationScheduleCarousel = () => {
 };
 
 export default InvitationScheduleCarousel;
-

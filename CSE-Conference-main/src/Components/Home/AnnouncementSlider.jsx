@@ -1,5 +1,5 @@
 import React from "react";
-import { FileText, ExternalLink, Sparkles, BookOpen, BellRing, AlertCircle, Presentation, Calendar } from "lucide-react";
+import { FileText, ExternalLink, Sparkles, BookOpen, BellRing, AlertCircle, Presentation, Calendar, Laptop } from "lucide-react";
 
 const AnnouncementSlider = () => {
   const announcements = [
@@ -10,6 +10,16 @@ const AnnouncementSlider = () => {
       link: "#/registration",
       linkText: "View Notice",
       icon: <AlertCircle className="w-4 h-4 text-yellow-300 shrink-0" />,
+      highlight: true,
+      blink: true,
+    },
+    {
+      badge: "ONLINE",
+      title: "Online Presentation Schedule Published",
+      desc: "Presentation timings and Google Meet video links for all online presentation tracks are now live.",
+      link: "https://drive.google.com/file/d/1AXle_xKQqhg3lna4tiWKwRehvM4YOG3f/view?usp=sharing",
+      linkText: "Online Schedule",
+      icon: <Laptop className="w-4 h-4 text-cyan-400 shrink-0" />,
       highlight: true,
       blink: true,
     },

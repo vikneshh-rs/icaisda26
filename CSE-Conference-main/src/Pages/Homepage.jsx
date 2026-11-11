@@ -1,6 +1,7 @@
 import React from "react";
 import Hero from "../Components/Home/Hero";
 import AnnouncementSlider from "../Components/Home/AnnouncementSlider";
+import InvitationScheduleCarousel from "../Components/Home/InvitationScheduleCarousel";
 import BrochureCarousel from "../Components/Home/BrochureCarousel";
 import Intro from "../Components/Home/Intro";
 import PTU from "../Components/Home/PTU";
@@ -46,6 +47,9 @@ const Homepage = () => {
           </div>
         </div>
       </div>
+
+      {/* Invitation and Schedule Slider Section */}
+      <InvitationScheduleCarousel />
 
       <BrochureCarousel />
       <Intro />

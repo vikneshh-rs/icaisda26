@@ -1,5 +1,5 @@
 import React from "react";
-import { FileText, ExternalLink, Sparkles, BookOpen, BellRing, AlertCircle } from "lucide-react";
+import { FileText, ExternalLink, Sparkles, BookOpen, BellRing, AlertCircle, Presentation } from "lucide-react";
 
 const AnnouncementSlider = () => {
   const announcements = [
@@ -12,6 +12,16 @@ const AnnouncementSlider = () => {
       icon: <AlertCircle className="w-4 h-4 text-yellow-300 shrink-0" />,
       highlight: true,
       blink: true,
+    },
+    {
+      badge: "NEW",
+      title: "Presentation PPT Template Published",
+      desc: "Download the official PowerPoint presentation template for your ICAISDA-2026 paper presentation.",
+      link: "https://docs.google.com/presentation/d/17FJGuhD1Z6tgfwY8k1_wkR4hMqZH1wUE/edit?usp=sharing&ouid=114098769929117624762&rtpof=true&sd=true",
+      linkText: "Download PPT Template",
+      icon: <Presentation className="w-4 h-4 text-amber-400 shrink-0" />,
+      highlight: true,
+      blink: false,
     },
     {
       badge: "NOTIFICATION",

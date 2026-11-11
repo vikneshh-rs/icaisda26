@@ -28,12 +28,22 @@ const Homepage = () => {
               </div>
             </div>
           </div>
-          <a
-            href="#/registration"
-            className="px-5 py-2 bg-white text-rose-900 font-extrabold text-xs sm:text-sm rounded-xl hover:bg-rose-50 transition shadow shrink-0"
-          >
-            View Notice
-          </a>
+          <div className="flex flex-wrap items-center justify-center gap-2.5 shrink-0">
+            <a
+              href="https://docs.google.com/presentation/d/17FJGuhD1Z6tgfwY8k1_wkR4hMqZH1wUE/edit?usp=sharing&ouid=114098769929117624762&rtpof=true&sd=true"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-4 py-2 bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-white font-extrabold text-xs sm:text-sm rounded-xl transition shadow flex items-center gap-1.5"
+            >
+              <span>📊 Download PPT Template</span>
+            </a>
+            <a
+              href="#/registration"
+              className="px-4 py-2 bg-white text-rose-900 font-extrabold text-xs sm:text-sm rounded-xl hover:bg-rose-50 transition shadow"
+            >
+              View Notice
+            </a>
+          </div>
         </div>
       </div>
 

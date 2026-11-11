@@ -1,5 +1,5 @@
 import React from "react";
-import { ScrollText, Award, MailIcon, FileText, BookOpen, ExternalLink, Download } from "lucide-react";
+import { ScrollText, Award, MailIcon, FileText, BookOpen, ExternalLink, Download, Presentation } from "lucide-react";
 import atlantisLogo from '../../assets/Images/logos/atlantis.png';
 
 // Title & Paragraph Data
@@ -57,6 +57,18 @@ const Guidelines = () => {
             <span>Submit Paper</span>
           </a>
 
+          {/* PPT Template Button */}
+          <a
+            href="https://docs.google.com/presentation/d/17FJGuhD1Z6tgfwY8k1_wkR4hMqZH1wUE/edit?usp=sharing&ouid=114098769929117624762&rtpof=true&sd=true"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-sm md:text-base bg-gradient-to-tr from-amber-600 via-orange-500 to-amber-700 hover:bg-orange-600 text-white px-5 py-3 rounded-full font-bold transition shadow-lg hover:shadow-xl hover:scale-105 flex items-center gap-2"
+          >
+            <Presentation className="w-4 h-4 text-amber-100" />
+            <span>Download PPT Template</span>
+            <ExternalLink className="w-3.5 h-3.5 opacity-80" />
+          </a>
+
           {/* Word Template Button */}
           <a
             href="https://drive.google.com/drive/folders/1F-UdCoJtnJ60xmlznowQ8h9-ft3H23PV?usp=sharing"
@@ -108,11 +120,11 @@ const Guidelines = () => {
               Templates & Proceedings Author Guidelines
             </h2>
             <p className="text-sm md:text-base text-slate-600 mt-1">
-              Please download and use the official Microsoft Word template and review the author guidelines before submitting your paper.
+              Please download and use the official Microsoft Word &amp; PowerPoint presentation templates and review the author guidelines.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {/* Word Template Box */}
             <div className="bg-white p-6 rounded-2xl border border-indigo-100 shadow-md hover:shadow-lg transition-all flex flex-col justify-between space-y-4">
               <div className="space-y-2">
@@ -131,7 +143,30 @@ const Guidelines = () => {
                 className="inline-flex items-center justify-center gap-2 w-full py-3 bg-indigo-600 hover:bg-indigo-700 text-white font-bold text-sm rounded-xl transition shadow hover:shadow-md"
               >
                 <Download className="w-4 h-4" />
-                <span>Open Word Template Drive</span>
+                <span>Word Template Drive</span>
+                <ExternalLink className="w-3.5 h-3.5" />
+              </a>
+            </div>
+
+            {/* PPT Template Box */}
+            <div className="bg-white p-6 rounded-2xl border border-amber-100 shadow-md hover:shadow-lg transition-all flex flex-col justify-between space-y-4">
+              <div className="space-y-2">
+                <div className="w-10 h-10 rounded-xl bg-amber-100 flex items-center justify-center text-amber-700">
+                  <Presentation className="w-5 h-5" />
+                </div>
+                <h3 className="text-lg font-bold text-amber-950">Presentation PPT Template (.pptx)</h3>
+                <p className="text-xs md:text-sm text-slate-600 leading-relaxed">
+                  Official conference presentation slide deck template for author paper presentations at ICAISDA-2026.
+                </p>
+              </div>
+              <a
+                href="https://docs.google.com/presentation/d/17FJGuhD1Z6tgfwY8k1_wkR4hMqZH1wUE/edit?usp=sharing&ouid=114098769929117624762&rtpof=true&sd=true"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2 w-full py-3 bg-amber-600 hover:bg-amber-700 text-white font-bold text-sm rounded-xl transition shadow hover:shadow-md"
+              >
+                <Download className="w-4 h-4" />
+                <span>Download PPT Template</span>
                 <ExternalLink className="w-3.5 h-3.5" />
               </a>
             </div>
@@ -142,7 +177,7 @@ const Guidelines = () => {
                 <div className="w-10 h-10 rounded-xl bg-emerald-100 flex items-center justify-center text-emerald-700">
                   <BookOpen className="w-5 h-5" />
                 </div>
-                <h3 className="text-lg font-bold text-emerald-950">Proceedings Author Guidelines</h3>
+                <h3 className="text-lg font-bold text-emerald-950">Proceedings Guidelines</h3>
                 <p className="text-xs md:text-sm text-slate-600 leading-relaxed">
                   Comprehensive slide deck detailing paper preparation, checklist, ethical guidelines, plagiarism policies, and submission workflow.
                 </p>
@@ -154,7 +189,7 @@ const Guidelines = () => {
                 className="inline-flex items-center justify-center gap-2 w-full py-3 bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-sm rounded-xl transition shadow hover:shadow-md"
               >
                 <BookOpen className="w-4 h-4" />
-                <span>View Author Guidelines Slides</span>
+                <span>View Guidelines Slides</span>
                 <ExternalLink className="w-3.5 h-3.5" />
               </a>
             </div>

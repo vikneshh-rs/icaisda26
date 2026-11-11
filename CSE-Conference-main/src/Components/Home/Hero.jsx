@@ -78,32 +78,6 @@ const Hero = () => {
             <span>Download PPT Template</span>
             <FaExternalLinkAlt className="text-xs opacity-80" />
           </a>
-
-          <a
-            href="#/registration"
-            className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-700 to-indigo-700 hover:from-blue-800 hover:to-indigo-800 text-white font-bold rounded-full shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105"
-          >
-            <span>📝 Register</span>
-          </a>
-
-          <a
-            href="https://meteor.springer.com/ICAISDA"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-slate-700 to-slate-800 hover:from-slate-800 hover:to-slate-900 text-white font-bold rounded-full shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105"
-          >
-            <span>📤 Submit Paper</span>
-          </a>
-
-          <a
-            href="https://ptuniv.edu.in/icaisda25/#/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-5 py-3 bg-white border border-slate-300 hover:border-blue-600 hover:text-blue-700 text-slate-700 font-semibold rounded-full shadow-sm hover:shadow-md transition-all duration-300 hover:scale-105"
-          >
-            <span>ICAISDA-2025 Website</span>
-            <FaExternalLinkAlt className="text-xs text-slate-400" />
-          </a>
         </div>
       </div>
 

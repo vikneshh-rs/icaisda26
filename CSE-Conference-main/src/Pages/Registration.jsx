@@ -11,8 +11,7 @@ import {
   ShieldAlert,
   CreditCard,
   Award,
-  Users2,
-  Lock
+  Users2
 } from "lucide-react";
 
 const Registration = () => {
@@ -31,10 +30,9 @@ const Registration = () => {
       bg: "bg-gradient-to-b from-blue-50/70 to-blue-100/30",
       border: "border-blue-200",
       textColor: "text-blue-900",
-      btnText: "Registration Closed",
-      link: "#",
-      isClosed: true,
-      btnBg: "bg-slate-300 text-slate-600 cursor-not-allowed"
+      btnText: "Register & Submit Paper",
+      link: "/paperregistration",
+      btnBg: "bg-blue-600 hover:bg-blue-700"
     },
     {
       title: "Join as a Presenter",
@@ -48,10 +46,9 @@ const Registration = () => {
       bg: "bg-gradient-to-b from-cyan-50/70 to-cyan-100/30",
       border: "border-cyan-200",
       textColor: "text-cyan-900",
-      btnText: "Registration Closed",
-      link: "#",
-      isClosed: true,
-      btnBg: "bg-slate-300 text-slate-600 cursor-not-allowed"
+      btnText: "Register Abstract",
+      link: "/paperregistration",
+      btnBg: "bg-cyan-600 hover:bg-cyan-700"
     },
     {
       title: "Join as a Listener",
@@ -67,10 +64,9 @@ const Registration = () => {
       bg: "bg-gradient-to-b from-emerald-50/70 to-emerald-100/30",
       border: "border-emerald-200",
       textColor: "text-emerald-900",
-      btnText: "Registration Closed",
-      link: "#",
-      isClosed: true,
-      btnBg: "bg-slate-300 text-slate-600 cursor-not-allowed"
+      btnText: "Register as Listener",
+      link: "/listenerregistration",
+      btnBg: "bg-emerald-600 hover:bg-emerald-700"
     }
   ];
 
@@ -98,132 +94,23 @@ const Registration = () => {
             REGISTRATION
           </h1>
           <p className="text-slate-600 max-w-2xl mx-auto text-lg">
-            Registration information and schedule for ICAISDA-2026.
+            Register for ICAISDA-2026 to present your research, connect with leading scientists, or attend sessions.
           </p>
           <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-cyan-500 mx-auto rounded-full"></div>
         </div>
 
-        {/* PROMINENT REGISTRATION CLOSED BANNER */}
-        <div className="w-full bg-gradient-to-br from-rose-950 via-rose-900 to-red-950 text-white rounded-3xl p-6 sm:p-8 md:p-10 shadow-2xl border border-rose-400/40 text-center space-y-4">
-          <div className="inline-flex items-center gap-2 bg-rose-500/30 border border-rose-400/50 text-rose-200 text-xs sm:text-sm uppercase px-4 py-1.5 rounded-full font-black tracking-wider shadow-inner">
-            <Lock className="w-4 h-4 text-yellow-300" />
-            Official Conference Notice
-          </div>
-          <h2 className="text-2xl sm:text-3xl md:text-5xl font-black text-white tracking-tight">
-            Registrations are Officially CLOSED
-          </h2>
-          <p className="text-rose-100 max-w-3xl mx-auto text-sm sm:text-base md:text-lg leading-relaxed">
-            The hard deadline (<strong className="text-yellow-300 font-bold">25th October 2026</strong>) for ICAISDA-2026 has passed. 
-            Registrations for <strong>Presenters, Paper Authors, and Listeners are now closed</strong> and new submissions are no longer accepted.
-          </p>
-          <div className="pt-2 text-xs sm:text-sm text-rose-200 font-medium">
-            Thank you for the overwhelming interest and submissions! For inquiries regarding previously confirmed registrations, please contact the registration committee below.
-          </div>
-        </div>
-
         {/* SLIDER / MARQUEE BANNER */}
-        <div className="w-full bg-rose-50/90 border-y border-rose-200 py-3 overflow-hidden rounded-xl shadow-inner relative">
-          <div className="animate-marquee whitespace-nowrap text-sm md:text-base font-bold text-rose-800 uppercase tracking-widest flex items-center gap-12">
-            <span>🔒 Registrations are Officially Closed</span>
-            <span>📢 Registration Deadline (25.10.2026) has Passed</span>
-            <span>🎉 Thank You for the Overwhelming Response</span>
-            <span>📅 Conference Dates: 12 - 13, November, 2026</span>
+        <div className="w-full bg-blue-50/80 border-y border-blue-100 py-3 overflow-hidden rounded-xl shadow-inner relative">
+          <div className="animate-marquee whitespace-nowrap text-sm md:text-base font-bold text-blue-800 uppercase tracking-widest flex items-center gap-12">
+            <span>📢 Paper Notification is in Progress</span>
+            <span>📅 Conference Dates: 12th & 13th November 2026</span>
+            <span>🏛️ Puducherry Technological University</span>
+            <span>📊 Presentation & Technical Sessions Published</span>
             {/* Duplicate for seamless loop */}
-            <span>🔒 Registrations are Officially Closed</span>
-            <span>📢 Registration Deadline (25.10.2026) has Passed</span>
-            <span>🎉 Thank You for the Overwhelming Response</span>
-            <span>📅 Conference Dates: 12 - 13, November, 2026</span>
-          </div>
-          <style>
-            {`
-              @keyframes marquee {
-                0% { transform: translateX(0%); }
-                100% { transform: translateX(-50%); }
-              }
-              .animate-marquee {
-                display: flex;
-                width: max-content;
-                animation: marquee 24s linear infinite;
-              }
-            `}
-          </style>
-        </div>
-
-        {/* FULL CONFERENCE & REGISTRATION SCHEDULE */}
-        <div className="bg-gradient-to-br from-blue-950 via-blue-900 to-indigo-950 text-white rounded-3xl p-5 sm:p-6 md:p-8 shadow-2xl border border-blue-400/30">
-          <div className="text-center mb-6">
-            <span className="inline-flex items-center gap-1.5 bg-blue-500/20 border border-blue-400/30 text-blue-300 text-xs uppercase px-3.5 py-1 rounded-full font-bold tracking-wider">
-              Conference &amp; Registration Schedule
-            </span>
-            <h3 className="text-2xl sm:text-3xl font-extrabold text-white mt-2">Important Dates &amp; Deadlines</h3>
-            <p className="text-slate-300 text-xs sm:text-sm mt-1">Please adhere to the conference schedule.</p>
-          </div>
-
-          {/* Schedule Grid - 100% visible on Mobile & Desktop */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3.5 sm:gap-4 mb-6">
-            {[
-              {
-                label: "Full Paper Submission Deadline",
-                oldDate: "31st August, 2026",
-                newDate: "28th September, 2026",
-                badge: "SUBMISSION",
-                badgeColor: "bg-blue-500/20 text-blue-300 border-blue-400/30",
-                dateColor: "text-yellow-300",
-              },
-              {
-                label: "Acceptance Intimation",
-                oldDate: "27th September, 2026",
-                newDate: "4th October, 2026",
-                badge: "INTIMATION",
-                badgeColor: "bg-purple-500/20 text-purple-300 border-purple-400/30",
-                dateColor: "text-purple-300",
-              },
-              {
-                label: "Last Date for Registration",
-                oldDate: "10th October, 2026",
-                newDate: "20th October, 2026",
-                badge: "REGISTRATION",
-                badgeColor: "bg-emerald-500/20 text-emerald-300 border-emerald-400/30",
-                dateColor: "text-emerald-300",
-              },
-              {
-                label: "Registration Closing Date",
-                newDate: "25th October, 2026 (CLOSED)",
-                badge: "CLOSED",
-                badgeColor: "bg-rose-500/30 text-rose-300 border-rose-400/40",
-                dateColor: "text-rose-300",
-              },
-              {
-                label: "Conference Date",
-                newDate: "12 - 13, November, 2026",
-                badge: "EVENT",
-                badgeColor: "bg-amber-500/20 text-amber-300 border-amber-400/30",
-                dateColor: "text-amber-300",
-              },
-            ].map((item, idx) => (
-              <div
-                key={idx}
-                className="bg-white/10 backdrop-blur-md border border-white/15 rounded-2xl p-4 flex flex-col justify-between hover:bg-white/15 transition-all shadow-md"
-              >
-                <div className="flex items-center justify-between gap-2 mb-2">
-                  <span className={`text-[10px] font-extrabold uppercase px-2 py-0.5 rounded-full border tracking-wider ${item.badgeColor}`}>
-                    {item.badge}
-                  </span>
-                  {item.oldDate && (
-                    <span className="line-through text-slate-400 text-xs font-medium">
-                      {item.oldDate}
-                    </span>
-                  )}
-                </div>
-                <h4 className="text-xs sm:text-sm font-semibold text-slate-200 mb-2">{item.label}</h4>
-                <p className={`text-base sm:text-lg font-black ${item.dateColor}`}>{item.newDate}</p>
-              </div>
-            ))}
-          </div>
-
-          <div className="w-full bg-rose-500/20 border border-rose-400/50 p-3.5 sm:p-4 rounded-2xl text-rose-200 text-xs sm:text-sm font-semibold flex items-center justify-center gap-2.5 text-center">
-            <Lock className="w-5 h-5 text-yellow-300 shrink-0" />
-            <span>Registrations closed on <strong className="text-yellow-300 font-bold">25th October 2026</strong>. The portal is no longer accepting submissions.</span>
+            <span>📢 Paper Notification is in Progress</span>
+            <span>📅 Conference Dates: 12th & 13th November 2026</span>
+            <span>🏛️ Puducherry Technological University</span>
+            <span>📊 Presentation & Technical Sessions Published</span>
           </div>
         </div>
 
@@ -232,149 +119,151 @@ const Registration = () => {
           {cards.map((card, idx) => (
             <div
               key={idx}
-              className={`bg-white border ${card.border} ${card.bg} rounded-2xl p-8 flex flex-col justify-between shadow-lg relative overflow-hidden`}
+              className={`bg-white border ${card.border} ${card.bg} rounded-2xl p-8 flex flex-col justify-between shadow-lg hover:shadow-xl hover:scale-[1.02] transition-all duration-300`}
             >
-              {/* Closed Badge Ribbon */}
-              <div className="absolute top-4 right-4 bg-rose-100 text-rose-800 text-[11px] font-extrabold px-3 py-1 rounded-full border border-rose-300 flex items-center gap-1">
-                <Lock className="w-3 h-3 text-rose-600" />
-                CLOSED
-              </div>
-
               <div className="space-y-6 flex-grow">
                 <div className="flex items-center justify-between">
                   <span className="text-xs font-bold uppercase tracking-wider text-slate-500">{card.title}</span>
-                  {card.icon}
+                  <div className="p-3 bg-white rounded-xl shadow-sm border border-slate-100">
+                    {card.icon}
+                  </div>
                 </div>
-                <h3 className={`text-2xl font-bold ${card.textColor}`}>{card.subtitle}</h3>
-                <p className="text-slate-600 text-sm leading-relaxed">{card.description}</p>
 
-                <ul className="space-y-3 pt-2">
-                  {card.bullets.map((bullet, bIdx) => (
-                    <li key={bIdx} className="flex items-start gap-3 text-sm text-slate-700">
-                      <Check className="w-5 h-5 text-emerald-600 shrink-0 mt-0.5" />
-                      <span>{bullet}</span>
-                    </li>
-                  ))}
-                </ul>
+                <div>
+                  <h3 className={`text-2xl font-black ${card.textColor}`}>{card.subtitle}</h3>
+                  <p className="text-slate-600 text-sm mt-3 leading-relaxed">{card.description}</p>
+                </div>
+
+                <div className="space-y-3 pt-2">
+                  <h4 className="text-xs font-bold uppercase tracking-wider text-slate-700">Requirements:</h4>
+                  <ul className="space-y-2.5">
+                    {card.bullets.map((bullet, bIdx) => (
+                      <li key={bIdx} className="flex items-start gap-2.5 text-xs text-slate-600">
+                        <Check className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
+                        <span>{bullet}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               </div>
 
               <div className="pt-6">
-                <div className="block text-center py-4 rounded-2xl bg-rose-50 border border-rose-200 text-rose-700 font-extrabold text-base md:text-lg shadow-sm cursor-not-allowed flex items-center justify-center gap-2">
-                  <Lock className="w-5 h-5 text-rose-600" />
-                  <span>Registration Closed</span>
-                </div>
+                <Link
+                  to={card.link}
+                  className={`block text-center py-4 rounded-2xl text-white font-extrabold text-base md:text-lg transition-all duration-300 hover:shadow-lg hover:scale-[1.02] ${card.btnBg}`}
+                >
+                  {card.btnText}
+                </Link>
               </div>
             </div>
           ))}
         </div>
 
-        {/* IMPORTANT NOTES & CALL */}
+        {/* IMPORTANT NOTES & CONTACTS */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          {/* Note Card */}
-          <div className="lg:col-span-2 bg-amber-50/60 border border-amber-200 rounded-2xl p-8 space-y-6 shadow-sm">
-            <div className="flex items-center gap-3 text-amber-800">
-              <AlertCircle className="w-6 h-6 text-amber-600" />
-              <h3 className="text-xl font-bold">Important Notes</h3>
-            </div>
-            <div className="space-y-4 text-slate-700 text-sm md:text-base leading-relaxed">
-              <div className="flex gap-3">
-                <Award className="w-6 h-6 text-blue-600 shrink-0 mt-1" />
+          <div className="lg:col-span-2 bg-amber-50/40 border border-amber-200/60 rounded-2xl p-6 md:p-8 space-y-4 shadow-sm">
+            <h3 className="text-xl font-bold text-amber-900 flex items-center gap-2">
+              <AlertCircle className="w-6 h-6 text-amber-600" /> Important Registration Instructions
+            </h3>
+            <div className="space-y-3 text-sm text-slate-700 leading-relaxed">
+              <div className="flex gap-3 bg-white p-3.5 rounded-xl border border-amber-100">
+                <Users2 className="w-6 h-6 text-blue-600 shrink-0 mt-0.5" />
                 <p>
-                  A <strong>Presenter Certificate</strong> will be issued only to the author(s) who present the paper at the conference. The certificate will clearly indicate the Presenter(s), all authors of the paper, and the title of the paper.
+                  <strong>Registration Covers Up to 3 Authors:</strong> Each paper registration may include one corresponding author and up to two co-authors. Every paper that is accepted through the review process and presented at the conference will be eligible for inclusion in conference proceedings.
                 </p>
               </div>
-              <div className="flex gap-3">
-                <Users2 className="w-6 h-6 text-cyan-600 shrink-0 mt-1" />
+              <div className="flex gap-3 bg-white p-3.5 rounded-xl border border-amber-100">
+                <Award className="w-6 h-6 text-amber-600 shrink-0 mt-0.5" />
                 <p>
-                  A maximum of <strong>three authors</strong> is permitted under a single paper registration. If a paper has more than three authors, all authors may be listed in the paper. However, authors beyond the first three must register separately under the <strong>Listener</strong> category if they wish to participate.
+                  <strong>Best Paper Awards:</strong> Outstanding papers demonstrating exceptional originality, technical quality, and societal impact will be recognized with the Best Paper Award.
                 </p>
               </div>
-              <div className="flex gap-3 bg-rose-100/70 p-3.5 rounded-xl border border-rose-300">
-                <Lock className="w-6 h-6 text-rose-700 shrink-0 mt-0.5" />
-                <p className="text-rose-950 font-medium">
-                  <strong>Registration Closed:</strong> Registrations for ICAISDA-2026 are officially closed as of <strong>25th October 2026</strong>. No further registrations will be processed.
+              <div className="flex gap-3 bg-white p-3.5 rounded-xl border border-amber-100">
+                <Users className="w-6 h-6 text-emerald-600 shrink-0 mt-0.5" />
+                <p>
+                  <strong>Additional Authors:</strong> A maximum of <strong>three authors</strong> is permitted under a single paper registration. If a paper has more than three authors, all authors may be listed in the paper. However, authors beyond the first three must register separately under the <strong>Listener</strong> category if they wish to participate.
                 </p>
               </div>
             </div>
           </div>
 
-          {/* Contact Support Card */}
-          <div className="bg-slate-50 border border-slate-200 rounded-2xl p-8 space-y-6 shadow-sm flex flex-col justify-between">
+          <div className="bg-blue-50/50 border border-blue-100 rounded-2xl p-6 md:p-8 flex flex-col justify-between shadow-sm">
             <div>
-              <div className="flex items-center gap-3 text-blue-600">
-                <Phone className="w-6 h-6" />
+              <div className="flex items-center gap-3 text-blue-900">
+                <Phone className="w-6 h-6 text-blue-600" />
                 <h3 className="text-xl font-semibold">Registration Support</h3>
               </div>
               <p className="text-slate-500 text-sm mt-2">
-                For further assistance regarding verified registrations, please contact:
+                For further information or assistance regarding registration, please contact:
               </p>
             </div>
             <div className="grid grid-cols-1 gap-4 my-4">
-              {contacts.map((contact, idx) => (
-                <div key={idx} className="flex justify-between items-center bg-white p-3 rounded-lg border border-slate-200 shadow-sm">
-                  <span className="font-semibold text-sm text-slate-700">{contact.name}</span>
-                  <a href={`tel:${contact.phone.replace(/\s+/g, '')}`} className="text-xs text-blue-600 hover:underline flex items-center gap-1 font-bold">
-                    <Phone className="w-3.5 h-3.5" /> {contact.phone}
-                  </a>
+              {contacts.map((c, idx) => (
+                <div key={idx} className="flex justify-between items-center text-sm bg-white p-3 rounded-xl border border-blue-100 shadow-sm">
+                  <span className="font-medium text-slate-700">{c.name}</span>
+                  <a href={`tel:${c.phone}`} className="text-blue-600 font-bold hover:underline">{c.phone}</a>
                 </div>
               ))}
             </div>
+            <p className="text-xs text-slate-400 text-center">
+              Available 9:00 AM – 5:00 PM IST on working days.
+            </p>
           </div>
         </div>
 
         {/* FEES TABLE SECTION */}
-        <div className="bg-white border border-slate-200 rounded-2xl p-6 md:p-8 shadow-lg space-y-6 overflow-hidden">
-          <div className="flex items-center gap-3 text-blue-900">
+        <div className="bg-white border border-slate-200 rounded-2xl p-6 md:p-8 shadow-sm space-y-6">
+          <div className="flex items-center gap-3 text-slate-900 border-b border-slate-100 pb-4">
             <CreditCard className="w-6 h-6 text-blue-600" />
-            <h3 className="text-2xl font-bold">Details of The Registration Fees</h3>
+            <h3 className="text-2xl font-bold">Conference Registration Fees</h3>
           </div>
 
-          <div className="overflow-x-auto w-full rounded-xl border border-slate-200">
-            <table className="w-full text-left border-collapse">
+          <div className="overflow-x-auto">
+            <table className="w-full text-left border-collapse text-sm md:text-base">
               <thead>
-                <tr className="bg-slate-55 text-slate-700 text-xs md:text-sm font-semibold border-b border-slate-200">
-                  <th className="p-4 md:p-5 w-1/2">Category</th>
-                  <th className="p-4 md:p-5">India (INR)</th>
-                  <th className="p-4 md:p-5">Others (USD)</th>
+                <tr className="bg-slate-100/75 border-b border-slate-200 text-slate-700 uppercase tracking-wider text-xs font-bold">
+                  <th className="p-4">Category</th>
+                  <th className="p-4">India (INR)</th>
+                  <th className="p-4">Others (USD)</th>
                 </tr>
               </thead>
-              <tbody className="text-xs md:text-sm divide-y divide-slate-200">
+              <tbody className="divide-y divide-slate-100">
                 {/* CATEGORY 1 */}
-                <tr className="bg-blue-50/50">
+                <tr className="bg-blue-50/40">
                   <td colSpan="3" className="p-4 font-bold text-blue-950 border-b border-slate-200">
-                    Join as a Presenter – Full Paper Publication in Springer Nature & Abstract Publication in ICAISDA-2026 Proceedings
+                    Full Paper Publication in Springer Nature (as Abstract in Souvenir & Full Paper in Springer Nature)
                   </td>
                 </tr>
                 <tr className="hover:bg-slate-50">
-                  <td className="p-4 pl-8 text-slate-700">Scholars and Students</td>
-                  <td className="p-4 font-semibold text-slate-900">₹8,000</td>
-                  <td className="p-4 font-semibold text-slate-900">$100</td>
+                  <td className="p-4 pl-8 text-slate-700">Industry and R&amp;D</td>
+                  <td className="p-4 font-semibold text-slate-900">₹9,000</td>
+                  <td className="p-4 font-semibold text-slate-900">$200</td>
                 </tr>
                 <tr className="hover:bg-slate-50">
                   <td className="p-4 pl-8 text-slate-700">Academicians</td>
-                  <td className="p-4 font-semibold text-slate-900">₹9,000</td>
-                  <td className="p-4 font-semibold text-slate-900">$125</td>
+                  <td className="p-4 font-semibold text-slate-900">₹8,000</td>
+                  <td className="p-4 font-semibold text-slate-900">$175</td>
                 </tr>
                 <tr className="hover:bg-slate-50">
-                  <td className="p-4 pl-8 text-slate-700">Industry and R&D</td>
-                  <td className="p-4 font-semibold text-slate-900">₹10,000</td>
+                  <td className="p-4 pl-8 text-slate-700">UG and PG Students</td>
+                  <td className="p-4 font-semibold text-slate-900">₹7,000</td>
                   <td className="p-4 font-semibold text-slate-900">$150</td>
                 </tr>
 
                 {/* CATEGORY 2 */}
                 <tr className="bg-cyan-50/40">
                   <td colSpan="3" className="p-4 font-bold text-cyan-950 border-b border-slate-200">
-                    Join as a Presenter – Abstract Publication Only in the ICAISDA-2026 Proceedings
+                    Only Abstract in the Souvenir (Certificate of Presentation)
                   </td>
+                </tr>
+                <tr className="hover:bg-slate-50">
+                  <td className="p-4 pl-8 text-slate-700">Industry and R&amp;D</td>
+                  <td className="p-4 font-semibold text-slate-900">₹4,000</td>
+                  <td className="p-4 font-semibold text-slate-900">$80</td>
                 </tr>
                 <tr className="hover:bg-slate-50">
                   <td className="p-4 pl-8 text-slate-700">Academicians</td>
                   <td className="p-4 font-semibold text-slate-900">₹3,000</td>
-                  <td className="p-4 font-semibold text-slate-900">$75</td>
-                </tr>
-                <tr className="hover:bg-slate-50">
-                  <td className="p-4 pl-8 text-slate-700">Scholars</td>
-                  <td className="p-4 font-semibold text-slate-900">₹2,500</td>
                   <td className="p-4 font-semibold text-slate-900">$60</td>
                 </tr>
                 <tr className="hover:bg-slate-50">
@@ -415,10 +304,6 @@ const Registration = () => {
             <p className="flex items-center gap-2 text-slate-600">
               <span className="w-1.5 h-1.5 rounded-full bg-cyan-600 shrink-0"></span>
               Completed registrations will be acknowledged by the Organizing Committee within 2-5 workdays after receiving your payment.
-            </p>
-            <p className="flex items-center gap-2 text-rose-800 font-semibold bg-rose-50 p-2.5 rounded-xl border border-rose-200">
-              <span className="w-2 h-2 rounded-full bg-rose-500 shrink-0"></span>
-              Registration closed on 25th October 2026. The registration portal is currently closed.
             </p>
           </div>
         </div>

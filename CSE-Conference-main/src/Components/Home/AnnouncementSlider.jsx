@@ -4,16 +4,6 @@ import { FileText, ExternalLink, Sparkles, BookOpen, BellRing, AlertCircle, Pres
 const AnnouncementSlider = () => {
   const announcements = [
     {
-      badge: "CLOSED",
-      title: "Registrations are Officially CLOSED",
-      desc: "Registration deadline has passed. Thank you for the overwhelming response!",
-      link: "#/registration",
-      linkText: "View Notice",
-      icon: <AlertCircle className="w-4 h-4 text-yellow-300 shrink-0" />,
-      highlight: true,
-      blink: true,
-    },
-    {
       badge: "ONLINE",
       title: "Online Presentation Schedule Published",
       desc: "Presentation timings and Google Meet video links for all online presentation tracks are now live.",

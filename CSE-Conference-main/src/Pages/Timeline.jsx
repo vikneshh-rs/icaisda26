@@ -60,8 +60,7 @@ const Timeline = () => {
                 },
                 {
                   label: "Registration Closing Date",
-                  newDate: "25th October, 2026 (CLOSED)",
-                  isClosed: true,
+                  newDate: "25th October, 2026",
                 },
                 {
                   label: "Conference Date",
@@ -106,8 +105,7 @@ const Timeline = () => {
             },
             {
               label: "Registration Closing Date",
-              newDate: "25th October, 2026 (CLOSED)",
-              isClosed: true,
+              newDate: "25th October, 2026",
             },
             {
               label: "Conference Date",
@@ -125,18 +123,12 @@ const Timeline = () => {
                     {row.oldDate}
                   </span>
                 )}
-                <span className={row.isClosed ? "text-rose-400 font-black text-sm sm:text-base" : "text-yellow-300 font-bold text-sm sm:text-base"}>
+                <span className="text-yellow-300 font-bold text-sm sm:text-base">
                   {row.newDate}
                 </span>
               </div>
             </div>
           ))}
-        </div>
-
-        {/* Closed Notice */}
-        <div className="w-full bg-rose-500/20 border border-rose-400/60 rounded-xl p-3.5 md:p-4 text-rose-200 text-xs sm:text-sm md:text-base font-semibold flex items-center justify-center gap-2 text-center">
-          <span className="text-xl shrink-0">🔒</span>
-          <span>Registrations closed on <strong className="text-rose-300 font-bold">25th October 2026</strong>. Registrations are no longer accepted.</span>
         </div>
       </div>
     </div>

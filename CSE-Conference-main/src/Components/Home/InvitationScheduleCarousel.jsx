@@ -7,7 +7,8 @@ import {
   FaTimes, 
   FaDownload,
   FaCalendarAlt,
-  FaFileAlt
+  FaFileAlt,
+  FaExternalLinkAlt
 } from "react-icons/fa";
 
 // Import schedule and invitation images
@@ -182,7 +183,21 @@ const InvitationScheduleCarousel = () => {
             View the official conference inauguration invitation, keynote schedule, and detailed paper presentation track schedules. Click any page to view in full screen.
           </p>
           
-          <div className="w-24 h-1.5 bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 mx-auto rounded-full mt-2"></div>
+          {/* Download Offline Schedule Action */}
+          <div className="pt-2 flex flex-wrap items-center justify-center gap-3">
+            <a
+              href="https://drive.google.com/file/d/1HnFpmMTMuvB2eQAdNBaneIINMdS1udrM/view?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-emerald-600 via-teal-600 to-cyan-700 hover:from-emerald-700 hover:to-teal-800 text-white font-extrabold text-sm md:text-base rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 hover:scale-105"
+            >
+              <FaDownload className="text-sm" />
+              <span>Download Offline Schedule</span>
+              <FaExternalLinkAlt className="text-xs opacity-80" />
+            </a>
+          </div>
+
+          <div className="w-24 h-1.5 bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 mx-auto rounded-full mt-3"></div>
         </div>
 
         {/* Filter Tabs */}

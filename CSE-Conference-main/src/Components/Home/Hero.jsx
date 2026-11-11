@@ -1,7 +1,7 @@
 import React from "react";
 import heroMain from "../../assets/Images/icaHome.png";
 import heroSub from "../../assets/Images/cs10.jpg";
-import { FaCalendarAlt, FaExternalLinkAlt, FaLock, FaFilePowerpoint } from "react-icons/fa";
+import { FaCalendarAlt, FaExternalLinkAlt, FaLock, FaFilePowerpoint, FaDownload } from "react-icons/fa";
 import icdnLogo from "../../assets/Images/logos/ptulogo2.png";
 
 const Hero = () => {
@@ -55,6 +55,18 @@ const Hero = () => {
 
         {/* Links and CTA */}
         <div className="flex flex-wrap items-center gap-3 pt-2">
+          {/* Download Offline Schedule Button */}
+          <a
+            href="https://drive.google.com/file/d/1HnFpmMTMuvB2eQAdNBaneIINMdS1udrM/view?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-5 py-3 bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 text-white font-bold rounded-full shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105"
+          >
+            <FaDownload className="text-sm" />
+            <span>Download Offline Schedule</span>
+            <FaExternalLinkAlt className="text-xs opacity-80" />
+          </a>
+
           {/* Download PPT Template Button */}
           <a
             href="https://docs.google.com/presentation/d/17FJGuhD1Z6tgfwY8k1_wkR4hMqZH1wUE/edit?usp=sharing&ouid=114098769929117624762&rtpof=true&sd=true"

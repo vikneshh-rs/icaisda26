@@ -1,5 +1,5 @@
 import React from "react";
-import { FileText, ExternalLink, Sparkles, BookOpen, BellRing, AlertCircle, Presentation } from "lucide-react";
+import { FileText, ExternalLink, Sparkles, BookOpen, BellRing, AlertCircle, Presentation, Calendar } from "lucide-react";
 
 const AnnouncementSlider = () => {
   const announcements = [
@@ -12,6 +12,16 @@ const AnnouncementSlider = () => {
       icon: <AlertCircle className="w-4 h-4 text-yellow-300 shrink-0" />,
       highlight: true,
       blink: true,
+    },
+    {
+      badge: "SCHEDULE",
+      title: "Offline Schedule & Timings Published",
+      desc: "Download the complete conference offline program schedule, presentation tracks, and inauguration timings.",
+      link: "https://drive.google.com/file/d/1HnFpmMTMuvB2eQAdNBaneIINMdS1udrM/view?usp=sharing",
+      linkText: "Download Offline Schedule",
+      icon: <Calendar className="w-4 h-4 text-emerald-400 shrink-0" />,
+      highlight: true,
+      blink: false,
     },
     {
       badge: "NEW",
